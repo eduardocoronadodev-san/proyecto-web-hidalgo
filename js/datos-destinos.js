@@ -1,49 +1,19 @@
 /**
  * datos-destinos.js
- * Base de datos local con todos los destinos turísticos de Hidalgo.
- * Se usa en explorar.html, detalle.html y mapa.html
+ * Base de datos local completa con los 9 Pueblos Mágicos oficiales de Hidalgo,
+ * además de los principales atractivos de Naturaleza y Gastronomía.
+ * Información histórica verificada con fuentes enciclopédicas y turísticas oficiales.
  */
 
 const DESTINOS = [
-    // ========================
-    // PUEBLOS MÁGICOS
-    // ========================
-    {
-        id: "real-del-monte",
-        nombre: "Real del Monte",
-        categoria: "pueblos-magicos",
-        etiqueta: "Pueblo Mágico",
-        ubicacion: "Mineral del Monte",
-        coordenadas: [20.1292, -98.6744],
-        imagen: "../img/imagen.webp",
-        galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
-        ],
-        resumen: "Pueblo minero con herencia inglesa, famoso por sus pastes y calles de cantera.",
-        descripcion: "Real del Monte es un encantador pueblo minero ubicado en las montañas de Hidalgo, a más de 2,600 metros de altitud. Su historia está profundamente ligada a la minería de plata y a la llegada de mineros ingleses en el siglo XIX, quienes dejaron una huella cultural que permanece hasta hoy: los famosos pastes, el fútbol y la arquitectura de estilo británico. Sus calles empedradas, fachadas coloridas y el clima fresco de montaña crean una atmósfera única que transporta a otra época.",
-        atractivos: [
-            "Calles empedradas y fachadas coloniales coloridas",
-            "Museo de Medicina Laboral en la Mina de Acosta",
-            "Panteón Inglés con vista panorámica",
-            "Museo del Paste",
-            "Centro histórico con tiendas de artesanías"
-        ],
-        actividades: [
-            "Recorrido por las minas históricas",
-            "Degustación de pastes en las pastelerías tradicionales",
-            "Caminatas por los senderos de montaña",
-            "Visita al Panteón Inglés",
-            "Fotografía arquitectónica"
-        ],
-        recomendaciones: "Lleva ropa abrigadora ya que el clima puede ser frío. Los fines de semana hay más actividad pero también más visitantes. Prueba los pastes de diferentes sabores en las pastelerías del centro."
-    },
+    // ==========================================
+    // 1. LOS 9 PUEBLOS MÁGICOS OFICIALES DE HIDALGO
+    // ==========================================
     {
         id: "huasca-de-ocampo",
         nombre: "Huasca de Ocampo",
         categoria: "pueblos-magicos",
-        etiqueta: "Pueblo Mágico",
+        etiqueta: "Pueblo Mágico (2001)",
         ubicacion: "Huasca de Ocampo",
         coordenadas: [20.2036, -98.5764],
         imagen: "../img/imagen.webp",
@@ -52,224 +22,32 @@ const DESTINOS = [
             "../img/imagen.webp",
             "../img/imagen.webp"
         ],
-        resumen: "Haciendas coloniales, bosques de niebla y el primer Pueblo Mágico de Hidalgo.",
-        descripcion: "Huasca de Ocampo fue el primer Pueblo Mágico designado en México en 2001. Este pintoresco pueblo se encuentra rodeado de bosques de encino y oyamel, con un clima fresco y paisajes que parecen sacados de un cuento. Sus antiguas haciendas de beneficio minero, como San Miguel Regla y Santa María Regla, son testimonio de la riqueza minera de la región y hoy funcionan como hoteles y centros turísticos.",
+        resumen: "El primer Pueblo Mágico de México (2001). Cuna de las opulentas haciendas de beneficio del Conde de Regla, bosques de niebla y leyendas de duendes.",
+        descripcion: "Huasca de Ocampo tiene el honor histórico de haber sido el primer destino de toda la República Mexicana en recibir el nombramiento de Pueblo Mágico el 5 de octubre de 2001. Enclavado en el Corredor de la Montaña, su historia colonial despegó en el siglo XVIII gracias a Pedro Romero de Terreros (el primer Conde de Regla), quien fundó las monumentales haciendas de beneficio de plata y oro como San Miguel Regla, Santa María Regla y San Antonio Regla. El pueblo conserva pintorescas casas de techos de dos aguas de teja roja, callejones de piedra volcánica y un místico entorno boscoso envuelto en leyendas populares.",
+        historia: "Durante la época prehispánica estuvo habitado por pueblos otomíes y nahuas que llamaban a la región Huascazaloya ('lugar de alegría o regocijo'). En la época virreinal, el auge de las ricas vetas argentíferas de Pachuca y Real del Monte impulsó la construcción de colosales complejos hacendarios provistos de hornos de fundición y acueductos. En honor a Melchor Ocampo, quien vivió en la región en el siglo XIX, el municipio adoptó su apellido.",
         atractivos: [
-            "Hacienda de Santa María Regla",
-            "Hacienda de San Miguel Regla",
-            "Prismas Basálticos (cerca)",
-            "Bosques y lagos cercanos",
-            "Plaza principal y parroquia"
+            "Hacienda de Santa María Regla (monumental fortaleza minera del siglo XVIII)",
+            "Hacienda de San Miguel Regla (antigua residencia del Conde de Regla con lagos)",
+            "Prismas Basálticos en la barranca de Santa María Regla",
+            "Museo de los Duendes",
+            "Bosque de las Truchas y presa San Antonio",
+            "Parroquia de San Juan Bautista (siglo XVI)"
         ],
         actividades: [
-            "Visita a las haciendas coloniales",
-            "Paseos a caballo por los bosques",
-            "Pesca en la presa San Antonio",
-            "Tirolesa y actividades de aventura",
-            "Compra de artesanías y dulces típicos"
+            "Paseos en lancha y pesca deportiva en el Bosque de las Truchas",
+            "Recorridos nocturnos de leyendas en las haciendas coloniales",
+            "Senderismo y cabalgatas por los bosques de oyamel y pino",
+            "Vuelos en tirolesa sobre cañones naturales",
+            "Compra de alfarería tradicional de barro colorado"
         ],
-        recomendaciones: "Es ideal visitarlo entre semana para disfrutar con más tranquilidad. Los bosques de los alrededores son perfectos para caminatas. No te pierdas la trucha fresca que se prepara en los restaurantes locales."
+        recomendaciones: "Clima fresco y templado con mañanas y noches frías. Se recomienda llevar calzado antiderrapante para caminar por las piedras de las haciendas y ropa térmica si te hospedas en cabañas."
     },
     {
-        id: "mineral-del-chico",
-        nombre: "Mineral del Chico",
+        id: "real-del-monte",
+        nombre: "Real del Monte",
         categoria: "pueblos-magicos",
-        etiqueta: "Pueblo Mágico",
-        ubicacion: "Mineral del Chico",
-        coordenadas: [20.2225, -98.7281],
-        imagen: "../img/imagen.webp",
-        galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
-        ],
-        resumen: "Pueblo rodeado de peñas y bosques, paraíso para el senderismo y la escalada.",
-        descripcion: "Mineral del Chico es un pequeño pueblo enclavado en la sierra hidalguense, rodeado por el Parque Nacional El Chico. Es conocido como la capital del turismo de aventura en Hidalgo gracias a sus formaciones rocosas ideales para la escalada, sus senderos para caminatas y ciclismo de montaña, y sus paisajes boscosos que invitan a la contemplación. Su centro histórico conserva la tranquilidad y el encanto de un pueblo minero del siglo XVIII.",
-        atractivos: [
-            "Parque Nacional El Chico",
-            "Peñas como Las Ventanas, Las Monjas y El Cuervo",
-            "Presa El Cedral",
-            "Centro histórico colonial",
-            "Mirador de las peñas"
-        ],
-        actividades: [
-            "Escalada en roca",
-            "Senderismo por el parque nacional",
-            "Ciclismo de montaña",
-            "Rappel y tirolesa",
-            "Camping en áreas designadas"
-        ],
-        recomendaciones: "Si quieres escalar, contrata un guía certificado. Lleva calzado apropiado para senderos. El clima cambia rápido, así que lleva ropa impermeable. La temporada de lluvias es hermosa pero los senderos pueden ser resbalosos."
-    },
-    {
-        id: "huichapan",
-        nombre: "Huichapan",
-        categoria: "pueblos-magicos",
-        etiqueta: "Pueblo Mágico",
-        ubicacion: "Huichapan",
-        coordenadas: [20.3753, -99.6511],
-        imagen: "../img/imagen.webp",
-        galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
-        ],
-        resumen: "Cuna de la Independencia en Hidalgo, con arquitectura virreinal y aguas termales.",
-        descripcion: "Huichapan es un pueblo con profundas raíces históricas. Fue aquí donde se dio el primer Grito de Independencia fuera de Dolores, en 1812, por el general Ignacio López Rayón. Su arquitectura virreinal, sus acueductos y su chapitel son testimonio de siglos de historia. Además, los alrededores ofrecen balnearios de aguas termales que complementan la visita cultural con relajación.",
-        atractivos: [
-            "El Chapitel (monumento histórico)",
-            "Acueducto colonial",
-            "Parroquia de San Mateo Apóstol",
-            "Plaza de la Independencia",
-            "Balnearios de aguas termales cercanos"
-        ],
-        actividades: [
-            "Recorrido histórico por el centro",
-            "Visita al Chapitel y museo",
-            "Baño en aguas termales",
-            "Fotografía de arquitectura colonial",
-            "Degustación de gastronomía local"
-        ],
-        recomendaciones: "Visita durante las fiestas patrias para vivir la recreación del Grito de Independencia. Los balnearios son ideales para ir en familia. El clima es más templado que en otros pueblos de Hidalgo."
-    },
-
-    // ========================
-    // NATURALEZA Y AVENTURA
-    // ========================
-    {
-        id: "prismas-basalticos",
-        nombre: "Prismas Basálticos",
-        categoria: "naturaleza",
-        etiqueta: "Naturaleza",
-        ubicacion: "Huasca de Ocampo",
-        coordenadas: [20.2394, -98.5603],
-        imagen: "../img/imagen.webp",
-        galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
-        ],
-        resumen: "Impresionantes columnas de basalto con cascadas que crean un paisaje único en el mundo.",
-        descripcion: "Los Prismas Basálticos son una formación geológica de columnas de basalto de hasta 40 metros de altura, consideradas una maravilla natural de México. Fueron formados por el enfriamiento lento de lava volcánica hace millones de años. El agua de las cascadas cae entre las columnas hexagonales creando un espectáculo visual impresionante. Alexander von Humboldt los describió en el siglo XIX, dándoles reconocimiento internacional.",
-        atractivos: [
-            "Columnas basálticas hexagonales de 40 metros",
-            "Cascadas que caen entre los prismas",
-            "Mirador panorámico",
-            "Jardín de esculturas",
-            "Presa de San Antonio"
-        ],
-        actividades: [
-            "Recorrido por los miradores",
-            "Fotografía paisajística",
-            "Paseo en lancha por la presa",
-            "Visita al jardín de esculturas",
-            "Rappel (con operadores autorizados)"
-        ],
-        recomendaciones: "La mejor luz para fotografías es por la mañana. Lleva calzado cómodo ya que hay muchas escaleras. En temporada de lluvias las cascadas son más espectaculares. Hay restaurantes cerca con comida regional."
-    },
-    {
-        id: "grutas-tolantongo",
-        nombre: "Grutas de Tolantongo",
-        categoria: "naturaleza",
-        etiqueta: "Naturaleza",
-        ubicacion: "Cardonal",
-        coordenadas: [20.6536, -99.0058],
-        imagen: "../img/imagen.webp",
-        galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
-        ],
-        resumen: "Aguas termales turquesa, grutas naturales, río y pozas escalonadas entre la sierra.",
-        descripcion: "Las Grutas de Tolantongo son uno de los destinos naturales más impresionantes de México. Ubicadas en un profundo cañón de la Sierra Madre Oriental, ofrecen aguas termales de color turquesa que brotan de las entrañas de la tierra. El complejo incluye grutas naturales con agua caliente, pozas escalonadas en la ladera del cerro con vistas espectaculares al cañón, un río de aguas cristalinas y un túnel de vapor natural. Es un paraíso para quienes buscan relajación en medio de la naturaleza.",
-        atractivos: [
-            "Pozas termales escalonadas con vista al cañón",
-            "Gruta principal con agua caliente",
-            "Túnel de vapor natural",
-            "Río de aguas turquesa",
-            "Cañón con vegetación exuberante"
-        ],
-        actividades: [
-            "Baño en pozas termales",
-            "Exploración de las grutas",
-            "Nado en el río",
-            "Camping en las áreas designadas",
-            "Senderismo por el cañón"
-        ],
-        recomendaciones: "Llega temprano, especialmente los fines de semana, ya que se llena rápido. Lleva traje de baño, sandalias acuáticas y protector solar biodegradable. El camino de acceso es sinuoso, conduce con precaución. Se recomienda pasar al menos una noche para disfrutar el lugar con calma."
-    },
-    {
-        id: "parque-nacional-el-chico",
-        nombre: "Parque Nacional El Chico",
-        categoria: "naturaleza",
-        etiqueta: "Naturaleza",
-        ubicacion: "Mineral del Chico",
-        coordenadas: [20.2128, -98.7275],
-        imagen: "../img/imagen.webp",
-        galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
-        ],
-        resumen: "Uno de los parques nacionales más antiguos de México, ideal para senderismo y escalada.",
-        descripcion: "El Parque Nacional El Chico, decretado en 1982, es uno de los parques nacionales más antiguos y emblemáticos de México. Con más de 2,700 hectáreas de bosques de oyamel, encino y cedro, ofrece un refugio natural a menos de dos horas de la Ciudad de México. Sus formaciones rocosas, conocidas como peñas, son famosas entre escaladores de todo el país. Los senderos bien señalizados atraviesan paisajes de ensueño entre la niebla y los árboles centenarios.",
-        atractivos: [
-            "Peña del Cuervo y Las Ventanas",
-            "Bosques de oyamel centenarios",
-            "Presa El Cedral",
-            "Formaciones rocosas para escalada",
-            "Flora y fauna de montaña"
-        ],
-        actividades: [
-            "Senderismo por rutas señalizadas",
-            "Escalada en roca",
-            "Ciclismo de montaña",
-            "Observación de aves",
-            "Camping"
-        ],
-        recomendaciones: "Registra tu visita en la caseta de entrada. No hagas fogatas fuera de las áreas permitidas. Lleva agua suficiente y ropa en capas. Los senderos pueden ser resbalosos en época de lluvias."
-    },
-    {
-        id: "pena-del-aire",
-        nombre: "Peña del Aire",
-        categoria: "naturaleza",
-        etiqueta: "Naturaleza",
-        ubicacion: "Metztitlán",
-        coordenadas: [20.5833, -98.7667],
-        imagen: "../img/imagen.webp",
-        galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
-        ],
-        resumen: "Mirador natural con vista a la impresionante Barranca de Metztitlán.",
-        descripcion: "La Peña del Aire es un espectacular mirador natural ubicado al borde de la Barranca de Metztitlán, una de las barrancas más profundas e impresionantes de México. Desde este punto se pueden apreciar vistas de vértigo hacia el fondo del cañón, donde el río Metztitlán serpentea entre la vegetación semidesértica. Es un lugar que quita el aliento y que muestra la diversidad de paisajes que ofrece el estado de Hidalgo.",
-        atractivos: [
-            "Mirador con vista a la barranca",
-            "Barranca de Metztitlán",
-            "Reserva de la Biosfera Barranca de Metztitlán",
-            "Vegetación semidesértica y cactáceas",
-            "Paisajes de contraste geográfico"
-        ],
-        actividades: [
-            "Contemplación del paisaje",
-            "Fotografía panorámica",
-            "Senderismo en los alrededores",
-            "Observación de flora desértica",
-            "Visita a comunidades cercanas"
-        ],
-        recomendaciones: "No hay barandales de protección, ten mucho cuidado al acercarte al borde. Lleva agua y protección solar. El acceso puede ser complicado en temporada de lluvias. Combina la visita con el Ex Convento de los Santos Reyes en Metztitlán."
-    },
-
-    // ========================
-    // GASTRONOMÍA TRADICIONAL
-    // ========================
-    {
-        id: "pastes",
-        nombre: "Pastes de Real del Monte",
-        categoria: "gastronomia",
-        etiqueta: "Gastronomía",
-        ubicacion: "Real del Monte",
+        etiqueta: "Pueblo Mágico (2004)",
+        ubicacion: "Mineral del Monte",
         coordenadas: [20.1292, -98.6744],
         imagen: "../img/imagen.webp",
         galeria: [
@@ -277,111 +55,501 @@ const DESTINOS = [
             "../img/imagen.webp",
             "../img/imagen.webp"
         ],
-        resumen: "Empanadas de origen inglés adoptadas y reinventadas por la cocina hidalguense.",
-        descripcion: "Los pastes son empanadas horneadas que llegaron a Hidalgo con los mineros ingleses de Cornualles en el siglo XIX. Originalmente rellenos de carne con papa, los hidalguenses los adoptaron y crearon nuevas variedades con ingredientes locales como mole, frijol, rajas con queso, tinga y hasta dulces como piña y arroz con leche. Hoy son el platillo más emblemático de Real del Monte y se pueden encontrar en decenas de pastelerías a lo largo del pueblo. Cada año se celebra el Festival del Paste.",
+        resumen: "Pueblo minero a más de 2,660 msnm con arquitectura córnico-británica, cuna del paste tradicional y del primer partido de fútbol en México.",
+        descripcion: "Real del Monte (oficialmente Mineral del Monte) es uno de los centros mineros más antiguos y emblemáticos de América. Ubicado en las alturas de la Sierra de Pachuca, suele estar cubierto por una mística niebla que enmarca sus techumbres de lámina roja y chimeneas victorianas. Tras la Independencia, en 1824 llegaron ingenieros y mineros de Cornualles (Inglaterra) para rehabilitar las minas inundadas, aportando tecnología de vapor, arquitectura europea, la afición al fútbol soccer, el golf y la herencia gastronómica cumbre del estado: el paste (cornish pasty).",
+        historia: "Explotado desde tiempos prehispánicos por los mexicas, alcanzó renombre mundial virreinal con la huelga minera de 1766 (la primera huelga laboral de América Latina encabezada por los barreteros contra Pedro Romero de Terreros). Con la inmigración británica del siglo XIX, se forjó un sincretismo cultural anglomexicano único en el país, visible en su cementerio inglés orientado hacia Gran Bretaña.",
         atractivos: [
+            "Mina de Acosta y Museo de Sitio (adentramiento a 400 m de profundidad)",
+            "Mina La Dificultad con su imponente torre de vapor decimonónica",
+            "Panteón Inglés en la cima del cerro del Judío",
             "Museo del Paste",
-            "Pastelerías tradicionales en el centro",
-            "Festival Internacional del Paste",
-            "Variedad de más de 30 sabores",
-            "Historia de la herencia cornish"
+            "Parroquia de Nuestra Señora del Rosario (siglo XVIII)",
+            "Callejón de los Artistas y Plaza Principal"
         ],
         actividades: [
-            "Degustación de pastes de diferentes sabores",
-            "Visita al Museo del Paste",
-            "Recorrido gastronómico por las pastelerías",
-            "Taller de elaboración de pastes (algunos locales lo ofrecen)"
+            "Degustar pastes tradicionales recién horneados (papa con carne, frijol, manzana)",
+            "Explorar túneles y tiros de mina con equipo de seguridad",
+            "Caminata fotográfica entre neblina y casonas de cantera",
+            "Asistir al Festival Internacional del Paste en el mes de octubre",
+            "Recorrer tiendas de platería local de alta calidad"
         ],
-        recomendaciones: "Prueba tanto los pastes tradicionales (papa con carne) como los de sabores regionales. El Museo del Paste ofrece una experiencia interactiva. Los pastes recién horneados son los mejores."
+        recomendaciones: "El clima es frío la mayor parte del año y suele descender drásticamente al caer la tarde. Imprescindible chamarra abrigadora y paraguas."
     },
     {
-        id: "barbacoa",
-        nombre: "Barbacoa Hidalguense",
-        categoria: "gastronomia",
-        etiqueta: "Gastronomía",
-        ubicacion: "Actopan y región",
-        coordenadas: [20.2692, -98.9428],
+        id: "mineral-del-chico",
+        nombre: "Mineral del Chico",
+        categoria: "pueblos-magicos",
+        etiqueta: "Pueblo Mágico (2011)",
+        ubicacion: "Mineral del Chico",
+        coordenadas: [20.2158, -98.7303],
         imagen: "../img/imagen.webp",
         galeria: [
             "../img/imagen.webp",
             "../img/imagen.webp",
             "../img/imagen.webp"
         ],
-        resumen: "Carne de borrego cocida en horno de tierra con pencas de maguey, tradición ancestral.",
-        descripcion: "La barbacoa hidalguense es considerada una de las mejores de México. Se prepara envolviendo la carne de borrego en pencas de maguey y cocinándola durante toda la noche en un horno cavado en la tierra, sobre piedras calientes. El resultado es una carne suave, jugosa y con un sabor ahumado inigualable. Se acompaña con consomé, tortillas hechas a mano, salsa borracha y nopales. Actopan es reconocido como la capital de la barbacoa y celebra cada año una feria dedicada a este platillo.",
+        resumen: "Corazón del Parque Nacional El Chico (el primer bosque protegido de México, 1898), paraíso del ecoturismo, la escalada en roca y cañonismo.",
+        descripcion: "Mineral del Chico es un oasis de paz alpino rodeado por más de 2,700 hectáreas de frondosos bosques de oyamel, pino y encino. Fundado como Real de Atotonilco en 1565 tras el hallazgo de minas de plata, su fisonomía destaca por pintorescas casas de techumbres rojas y la torre de la Parroquia de la Purísima Concepción. Es la capital indiscutible del turismo de aventura y ecoturismo en el centro del país.",
+        historia: "Por decreto del presidente Porfirio Díaz en 1898, los bosques de Mineral del Chico fueron declarados como la primera Reserva Forestal de México (Monte Vedado del Mineral del Chico), convirtiéndose en pionero de la conservación ambiental en el continente americano.",
         atractivos: [
-            "Mercados y puestos de barbacoa en Actopan",
-            "Feria de la Barbacoa de Actopan",
-            "Proceso tradicional de cocción en horno de tierra",
-            "Consomé de barbacoa",
-            "Acompañamientos tradicionales"
+            "Parque Nacional El Chico con formaciones rocosas milenarias",
+            "Mirador Peña del Cuervo (vista panorámica de 360 grados a 2,773 msnm)",
+            "Vía Ferrata en la Peña La Tanda",
+            "Parroquia de la Purísima Concepción (reloj de cantera donado por Gabriel Mancera)",
+            "Roca Las Ventanas y La Bruja",
+            "Presas El Cedral y Jaramillo"
         ],
         actividades: [
-            "Degustación de barbacoa tradicional",
-            "Visita a la Feria de la Barbacoa (noviembre)",
-            "Conocer el proceso de preparación en hornos de tierra",
-            "Recorrido gastronómico por Actopan"
+            "Escalada en roca y rappel en formaciones volcánicas",
+            "Campismo y alquiler de cabañas ecoturísticas en el bosque",
+            "Ciclismo de montaña y senderismo guiado",
+            "Paseos a caballo y tirolesas en El Cedral",
+            "Degustar la tradicional bebida local 'Tachuela' a base de frutas y hierbas"
         ],
-        recomendaciones: "La barbacoa se consigue fresca principalmente los fines de semana y muy temprano por la mañana. Actopan es el mejor lugar para probarla. Pide el consomé aparte, es una delicia."
+        recomendaciones: "Ambiente 100% de naturaleza y frío de montaña. Usa botas de campo con buena tracción y lleva efectivo, ya que la señal y cajeros son limitados en el bosque."
     },
     {
-        id: "ximbo",
-        nombre: "Ximbo",
+        id: "huichapan",
+        nombre: "Huichapan",
+        categoria: "pueblos-magicos",
+        etiqueta: "Pueblo Mágico (2012)",
+        ubicacion: "Huichapan",
+        coordenadas: [20.3756, -99.6508],
+        imagen: "../img/imagen.webp",
+        galeria: [
+            "../img/imagen.webp",
+            "../img/imagen.webp",
+            "../img/imagen.webp"
+        ],
+        resumen: "Cuna cívica donde se festejó por primera vez el Grito de Independencia en 1812. Famoso por su colosal acueducto El Saucillo y balnearios termales.",
+        descripcion: "Huichapan deslumbra por su armoniosa arquitectura de cantera blanca y rosa, monumentales plazas arboladas, balnearios de aguas termales y un papel protagónico en la historia nacional. En el balcón del edificio histórico 'El Chapitel', el General Ignacio López Rayón y Andrés Quintana Roo conmemoraron por primera vez en la historia de México el Grito de Dolores el 16 de septiembre de 1812.",
+        historia: "Poblado originalmente por etnias otomíes, fue un punto neurálgico en el Camino Real de Tierra Adentro. Además de su relevancia independentista, en el siglo XVIII albergó impresionantes obras de ingeniería hidráulica comunitaria como el Acueducto de San Mateo (El Saucillo).",
+        atractivos: [
+            "El Chapitel (sitio de la primera conmemoración del Grito de Independencia)",
+            "Acueducto El Saucillo (el acueducto de arcos más alto de América Latina, con 44 metros)",
+            "Parroquia de San Mateo Apóstol y conjunto de capillas virreinales",
+            "Pinturas rupestres en el cerro de Boyé",
+            "Balnearios de aguas termales curativas como Chichimequillas",
+            "Palacio Municipal con su reloj porfiriano"
+        ],
+        actividades: [
+            "Recorrer a pie o en tirolesa los arcos monumentales de El Saucillo",
+            "Visitar los manantiales y aguas termales familiares",
+            "Tour cultural e histórico guiado por El Chapitel y museos",
+            "Probar las carnitas huichapenses y el mole con guajolote",
+            "Degustar la bebida típica 'Carnavalito' (tequila, jugo de naranja y canela)"
+        ],
+        recomendaciones: "Clima semicálido y soleado. Lleva traje de baño para los parques acuáticos y ropa cómoda y fresca para caminar por el centro histórico."
+    },
+    {
+        id: "tecozautla",
+        nombre: "Tecozautla",
+        categoria: "pueblos-magicos",
+        etiqueta: "Pueblo Mágico (2015)",
+        ubicacion: "Tecozautla",
+        coordenadas: [20.5333, -99.6333],
+        imagen: "../img/imagen.webp",
+        galeria: [
+            "../img/imagen.webp",
+            "../img/imagen.webp",
+            "../img/imagen.webp"
+        ],
+        resumen: "Oasis de aguas termales en un valle de huertos y nogales, hogar de El Géiser (respiradero volcánico a 95°C) y el Reloj Monumental de cantera.",
+        descripcion: "Tecozautla se ubica en un valle fértil salpicado de huertos de nuez de castilla, cactáceas y manantiales hidrotermales. Su símbolo urbano más reconocido es el majestuoso Torreón o Reloj Monumental de estilo neoclásico porfiriano labrado en cantera pura. Su gran imán turístico es la abundancia de balnearios naturales alimentados por fallas geológicas activas, destacando el impresionante respiradero volcánico de El Géiser.",
+        historia: "De herencia prehispánica otomí (su nombre significa 'lugar de la tierra amarilla'), posee una notable zona arqueológica en Pañhú, vinculada a la cultura xajay que floreció entre los años 300 y 1100 d.C., con vistas espectaculares al valle.",
+        atractivos: [
+            "El Géiser (uno de los respiraderos volcánicos naturales más potentes de América)",
+            "Reloj Monumental de Tecozautla (inaugurado en el Centenario de la Independencia, 1910)",
+            "Zona Arqueológica de Pañhú (vestigios de pirámides dedicadas al Sol y a Tláloc)",
+            "Pinturas rupestres de Banzhá",
+            "Manantiales y balnearios de aguas hipertermales",
+            "Exconvento de Santiago Apóstol del siglo XVI"
+        ],
+        actividades: [
+            "Baños de vapor natural y relajación hidrotermal 24 horas en El Géiser",
+            "Exploración arqueológica y contemplación paisajística en Pañhú",
+            "Paseo por las huertas familiares de nogales y compra de nuez fresca",
+            "Caminata nocturna en la plaza central frente al Torreón iluminado",
+            "Degustación de quesos artesanales, mole rojo y tamales de xoconostle"
+        ],
+        recomendaciones: "Clima cálido la mayor parte del año. Trae traje de baño, toalla, bloqueador solar biodegradable y calzado acuático."
+    },
+    {
+        id: "zimapan",
+        nombre: "Zimapán",
+        categoria: "pueblos-magicos",
+        etiqueta: "Pueblo Mágico (2018)",
+        ubicacion: "Zimapan",
+        coordenadas: [20.7383, -99.3808],
+        imagen: "../img/imagen.webp",
+        galeria: [
+            "../img/imagen.webp",
+            "../img/imagen.webp",
+            "../img/imagen.webp"
+        ],
+        resumen: "Puerta a la Sierra Gorda hidalguense, cuna del descubrimiento del elemento Vanadio (1801), hogar de la imponente Presa Zimapán y Los Mármoles.",
+        descripcion: "Zimapán es el municipio geográficamente más extenso de Hidalgo. Enclavado en la transición hacia la Sierra Gorda, cuenta con una riqueza geológica asombrosa. En sus minas, el mineralogista Andrés Manuel del Río descubrió en 1801 un nuevo elemento químico de la tabla periódica: el Vanadio (inicialmente llamado eritronio). El pueblo ofrece un colosal patrimonio natural con cañones verticales de más de 400 metros de altura, presas navegables y un árbol sabino milenario en el corazón del pueblo.",
+        historia: "Fue un próspero enclave minero virreinal desde 1576. Su Parroquia de San Juan Bautista posee una de las fachadas barrocas churriguerescas más exquisitas del centro de México, adornada con detalles en cantera y un púlpito de una sola pieza.",
+        atractivos: [
+            "Presa Hidroeléctrica de Zimapán (cañón del Infiernillo en el río Moctezuma)",
+            "Monolito 'El Vigilante' (formación rocosa natural de 15 metros)",
+            "Parque Nacional Los Mármoles (bosques de enebro, pino y mármol azul)",
+            "El Sabino de San Nicolás (ahuehuete milenario con más de 500 años y 25 m de tronco)",
+            "Parroquia de San Juan Bautista (joya del barroco churrigueresco)",
+            "Grutas de Xhajhá con manantiales termales"
+        ],
+        actividades: [
+            "Paseos en lancha rápida por el cañón y presa de Zimapán",
+            "Pesca deportiva de lobina negra",
+            "Senderismo de montaña y campismo en el Parque Nacional Los Mármoles",
+            "Rutas 4x4 y ciclismo extremo por las cañadas",
+            "Probar la barbacoa de chivo y el pan tradicional de piloncillo"
+        ],
+        recomendaciones: "Debido a la diversidad de microclimas (caluroso en el cañón y frío en las partes altas de la sierra), se recomienda vestir por capas de ropa."
+    },
+    {
+        id: "zempoala",
+        nombre: "Zempoala",
+        categoria: "pueblos-magicos",
+        etiqueta: "Pueblo Mágico (2020)",
+        ubicacion: "Zempoala",
+        coordenadas: [19.9158, -98.6694],
+        imagen: "../img/imagen.webp",
+        galeria: [
+            "../img/imagen.webp",
+            "../img/imagen.webp",
+            "../img/imagen.webp"
+        ],
+        resumen: "Cuna del monumental Acueducto del Padre Tembleque (Patrimonio Mundial de la UNESCO) y de legendarias haciendas pulqueras y ganaderas.",
+        descripcion: "Zempoala respira tranquilidad virreinal e historia viva. Reconocido como Pueblo Mágico en diciembre de 2020, es célebre internacionalmente por albergar la monumental arquería mayor del Acueducto del Padre Tembleque, la obra hidráulica más importante del siglo XVI en América, inscrita en la lista del Patrimonio Mundial de la UNESCO. Asimismo, el municipio conserva una treintena de históricas haciendas ganaderas y pulqueras rodeadas de valles magueyeros.",
+        historia: "La construcción del Acueducto fue ideada entre 1555 y 1572 por Fray Francisco de Tembleque con mano de obra indígena, alcanzando una longitud de más de 48 kilómetros para llevar agua potable desde los manantiales del volcán Tecajete hasta Otumba.",
+        atractivos: [
+            "Acueducto del Padre Tembleque (Arquería Mayor de Tepeyahualco con arco central de casi 40 m)",
+            "Haciendas pulqueras históricas (San Antonio Tochatlaco, San Juan Pueblilla, Montecillos)",
+            "Exconvento de Todos los Santos (fundado por frailes franciscanos en 1570)",
+            "Monumento a La Picota o Rollo de Justicia virreinal",
+            "Plaza central con su quiosco y callejones empedrados"
+        ],
+        actividades: [
+            "Recorrido fotográfico y caminata por la arquería monumental del Padre Tembleque",
+            "Ruta del pulque con degustación de curados en tinacales tradicionales",
+            "Recorridos guiados por los cascos hacendarios del siglo XVIII y XIX",
+            "Degustar platillos con gualumbos (flor de maguey), chinicuiles y mixiotes",
+            "Ciclismo rural entre senderos de nopaleras y magueyes"
+        ],
+        recomendaciones: "Clima templado semiárido con vientos frescos. Lleva sombrero o gorra, bloqueador solar y calzado apto para terracería."
+    },
+    {
+        id: "acaxochitlan",
+        nombre: "Acaxochitlán",
+        categoria: "pueblos-magicos",
+        etiqueta: "Pueblo Mágico (2023)",
+        ubicacion: "Acaxochitlán",
+        coordenadas: [20.1583, -98.2042],
+        imagen: "../img/imagen.webp",
+        galeria: [
+            "../img/imagen.webp",
+            "../img/imagen.webp",
+            "../img/imagen.webp"
+        ],
+        resumen: "Pueblo Mágico incorporado en 2023. Paraíso de bosques húmedos, medicina tradicional otomí y náhuatl, textiles en telar de cintura y cascadas.",
+        descripcion: "Acaxochitlán ('lugar donde florece el acaxóchitl') se localiza en los límites de la Sierra de Tenango y la Sierra Norte. Incorporado al programa de Pueblos Mágicos en 2023, destaca por la preservación intacta de sus culturas originarias otomí y náhuatl. El paisaje está envuelto en densas neblinas, presas rodeadas de bosques de pino-encino, olor a pan tradicional cocinado en hornos de leña y cascadas majestuosas como Chimalapa.",
+        historia: "Su profunda vocación botánica y de medicina tradicional convirtió a sus curanderas y parteras tradicionales en un pilar cultural reconocido a nivel nacional. Además, durante la temporada de lluvias sus bosques producen una impresionante variedad de hongos silvestres comestibles objeto de festivales gastronómicos.",
+        atractivos: [
+            "Cascadas de Chimalapa (caídas de agua de más de 30 metros en medio del bosque)",
+            "Presas del Tejocotal, Omiltemetla y Santa Ana Tzacuala",
+            "Templo de la Asunción de María y Capilla del Señor del Colateral",
+            "Comunidades indígenas artesanas como Santa Catarina (bordados y telar de cintura)",
+            "Bosques de hongos silvestres y senderos de niebla"
+        ],
+        actividades: [
+            "Paseos en lancha y cuatrimotos alrededor de la presa El Tejocotal",
+            "Adquirir rebozos y quexquémetls bordados a mano en telar de cintura",
+            "Participar en talleres de medicina tradicional y etnobotánica",
+            "Degustar el tradicional pan cruzado y las bebidas fermentadas de frutas locales",
+            "Asistir a la fiesta del Señor del Colateral (famosa por sus monumentales tapetes de aserrín)"
+        ],
+        recomendaciones: "Clima fresco y muy húmedo con niebla frecuente. Es altamente recomendable llevar chamarra impermeable, botas para lodo y paraguas."
+    },
+    {
+        id: "metztitlan",
+        nombre: "Metztitlán",
+        categoria: "pueblos-magicos",
+        etiqueta: "Pueblo Mágico (2023)",
+        ubicacion: "Metztitlan",
+        coordenadas: [20.5961, -98.7631],
+        imagen: "../img/imagen.webp",
+        galeria: [
+            "../img/imagen.webp",
+            "../img/imagen.webp",
+            "../img/imagen.webp"
+        ],
+        resumen: "Pueblo Mágico incorporado en 2023. Centro de la Reserva de la Biosfera Barranca de Metztitlán, con su imponente Convento Agustino del siglo XVI.",
+        descripcion: "Metztitlán ('lugar de la luna') se sitúa en el corazón de una de las reservas ecológicas más impresionantes de México: la Reserva de la Biosfera Barranca de Metztitlán. En contraste con sus profundos cañones poblados por densas colonias de cactus gigantes (candelabros y viejitos), su vega agrícola es sumamente fértil. En lo alto domina el Convento de los Santos Reyes, una de las construcciones virreinales más fastuosas del siglo XVI.",
+        historia: "En la época prehispánica, el Señorío de Metztitlán fue un señorío independiente otomí que resistió ferozmente las invasiones del poderoso Imperio Mexica. En el virreinato, los frailes agustinos construyeron en 1553 el Convento de los Santos Reyes, con extraordinarios retablos dorados y pinturas al fresco renacentistas.",
+        atractivos: [
+            "Exconvento de los Santos Reyes (joya de la arquitectura monástica agustina con retablos barrocos dorados)",
+            "Reserva de la Biosfera Barranca de Metztitlán (santuario de cactáceas endémicas y aves rapaces)",
+            "Laguna de Metztitlán y Vega del Río Grande",
+            "Cueva de los Murciélagos",
+            "Pinturas rupestres de la Cañada de Metztitlán",
+            "El Cabildo colonial y Reloj Municipal"
+        ],
+        actividades: [
+            "Fotografía paisajística y senderismo entre bosques de cactáceas columnares",
+            "Observación de aves migratorias en la vega y cañón",
+            "Visita cultural guiada a los retablos y claustro del Convento de los Santos Reyes",
+            "Comprar nuez cimarrona, miel de mezquite y aguacate criollo",
+            "Probar tamales de tequexquite, tamal de pescado y esquites con epazote silvestre"
+        ],
+        recomendaciones: "El fondo de la barranca tiene clima cálido seco y soleado. Lleva ropa fresca, sombrero, gafas de sol y abundante agua para hidratación."
+    },
+
+    // ==========================================
+    // 2. NATURALEZA Y AVENTURA
+    // ==========================================
+    {
+        id: "prismas-basalticos",
+        nombre: "Prismas Basálticos",
+        categoria: "naturaleza",
+        etiqueta: "Naturaleza",
+        ubicacion: "Huasca de Ocampo",
+        coordenadas: [20.2333, -98.5833],
+        imagen: "../img/imagen.webp",
+        galeria: [
+            "../img/imagen.webp",
+            "../img/imagen.webp",
+            "../img/imagen.webp"
+        ],
+        resumen: "Una de las maravillas naturales geológicas más impresionantes del mundo: columnas geométricas de basalto bañadas por cascadas de agua.",
+        descripcion: "Los Prismas Basálticos son formaciones columnares poligonales (de 5 y 6 caras) de roca ígnea volcánica formadas hace aproximadamente 2.5 millones de años por el enfriamiento lento de coladas de lava. Estas imponentes columnas alcanzan más de 30 metros de altura y revisten las paredes de la barranca de Santa María Regla, bañadas permanentemente por cuatro saltos de agua cristalina provenientes de la presa de San Antonio Regla. Fueron inmortalizados en grabados en 1803 por el célebre explorador alemán Alexander von Humboldt.",
+        historia: "Humboldt quedó tan maravillado por la perfección geométrica de los prismas durante su visita a las minas de Real del Monte y Pachuca en 1803 que dibujó bocetos al natural que posteriormente dieron la vuelta al mundo en sus obras científicas europeas, atrayendo viajeros de todos los continentes.",
+        atractivos: [
+            "Paredes de columnas de basalto de más de 30 metros",
+            "Puente colgante peatonal con vista panorámica a la garganta",
+            "Cuatro cascadas naturales alimentadas por la presa",
+            "Área de miradores y senderos empedrados",
+            "Tiendas de artesanías de obsidiana y plata"
+        ],
+        actividades: [
+            "Cruzar el puente colgante a gran altura",
+            "Paseos en lancha por la presa de San Antonio",
+            "Tirolesa de más de 200 metros sobre la barranca",
+            "Campismo y descanso en albercas con aguas templadas",
+            "Fotografía de naturaleza y geología"
+        ],
+        recomendaciones: "Usa zapatos antiderrapantes porque el piso cerca de las cascadas suele humedecerse y puede tornarse resbaladizo."
+    },
+    {
+        id: "grutas-tolantongo",
+        nombre: "Grutas de Tolantongo",
+        categoria: "naturaleza",
+        etiqueta: "Naturaleza",
+        ubicacion: "Cardonal",
+        coordenadas: [20.6489, -98.9953],
+        imagen: "../img/imagen.webp",
+        galeria: [
+            "../img/imagen.webp",
+            "../img/imagen.webp",
+            "../img/imagen.webp"
+        ],
+        resumen: "Paraíso de pozas termales turquesa escalonadas en el cañón, río cálido, gruta con cascada interior y túneles de vapor natural a 38°C.",
+        descripcion: "Las Grutas de Tolantongo constituyen uno de los parques naturales termales más espectaculares de América Latina. Enclavadas en un cañón de la Sierra Madre Oriental en el municipio de Cardonal, las aguas termales emergen de la montaña a una agradable temperatura de entre 36°C y 38°C, ricas en sales minerales que le otorgan un inconfundible y deslumbrante color azul turquesa. El complejo está administrado de forma ejidal cooperativa comunitaria sustentable.",
+        historia: "Durante décadas fue un paraje secreto custodiado por familias de la comunidad indígena otomí de Cardonal. A partir de 1975, los ejidatarios unieron esfuerzos para abrir caminos de terracería y construir de manera escalonada las pozas artificiales en la ladera de la montaña, preservando intacta la gruta natural y el río.",
+        atractivos: [
+            "Pozas termales escalonadas con vista panorámica al cañón",
+            "La Gruta principal con torrente de agua termal y estalactitas",
+            "El Túnel de vapor natural (cueva termal con vapor a presión)",
+            "Río termal de color turquesa cristalina",
+            "Puente colgante y tirolesa de casi 2 kilómetros",
+            "Cascadas naturales y senderos de cañonismo"
+        ],
+        actividades: [
+            "Nadar en el río termal y en las pozas panorámicas",
+            "Ingresar a la gruta y experimentar el hidromasaje natural",
+            "Volar en la tirolesa dividida en 4 tiros sobre el cañón",
+            "Acampar a la orilla del río bajo las estrellas",
+            "Senderismo hacia las pozas del Paraíso Escondido"
+        ],
+        recomendaciones: "Se recomienda visitar entre semana para disfrutar de mayor tranquilidad. Solo se acepta pago en efectivo en taquillas y restaurantes. Indispensable calzado acuático (aquashoes) y funda impermeable para celular."
+    },
+    {
+        id: "dunas-rojas-pacula",
+        nombre: "Dunas Rojas de Pacula",
+        categoria: "naturaleza",
+        etiqueta: "Naturaleza",
+        ubicacion: "Pacula",
+        coordenadas: [21.0500, -99.3000],
+        imagen: "../img/imagen.webp",
+        galeria: [
+            "../img/imagen.webp",
+            "../img/imagen.webp",
+            "../img/imagen.webp"
+        ],
+        resumen: "El 'paisaje marciano' de Hidalgo: colinas de arena y arcilla roja intensa rodeadas de piedras calizas y pinos en la sierra.",
+        descripcion: "Las Dunas Rojas de Pacula son un capricho geológico único en el centro de México. En medio del bosque serrano entre Pacula y Zimapán, se extiende un terreno de arena rojiza aterciopelada cuyo color se debe a la altísima concentración de óxido de hierro y minerales de laterita. El contraste entre la tierra escarlata, las rocas calizas blanquecinas y el verde de los pinos hace que caminar por aquí parezca estar en la superficie del planeta Marte.",
+        historia: "El terreno fue descubierto por visitantes y amantes del senderismo que cruzaban las brechas de la Sierra Gorda hidalguense. Su color rojizo no mancha permanentemente la piel ni es tóxico, pero tiñe calzado y ropa, convirtiéndose en el atractivo fotográfico más viral de la región.",
+        atractivos: [
+            "Colinas de arena y dunas de color rojo óxido",
+            "Monolitos de piedra caliza blanca contrastante",
+            "Bosque de niebla y pino circundante",
+            "Cercanía con el Parque Nacional Los Mármoles"
+        ],
+        actividades: [
+            "Fotografía creativa de paisajes surrealistas",
+            "Caminata y senderismo de exploración geológica",
+            "Paseos en bicicleta de montaña o cuatrimoto en zonas permitidas",
+            "Contemplación del atardecer"
+        ],
+        recomendaciones: "Lleva ropa y calzado que no te importe que se tiña de rojo con la arcilla. Lleva agua y provisiones, ya que no hay comercios dentro del área natural."
+    },
+    {
+        id: "pena-del-aire",
+        nombre: "Peña del Aire",
+        categoria: "naturaleza",
+        etiqueta: "Naturaleza",
+        ubicacion: "Huasca de Ocampo",
+        coordenadas: [20.2500, -98.5333],
+        imagen: "../img/imagen.webp",
+        galeria: [
+            "../img/imagen.webp",
+            "../img/imagen.webp",
+            "../img/imagen.webp"
+        ],
+        resumen: "Enorme roca basáltica en equilibrio al borde de un abismo de 800 metros en la Reserva de la Biosfera Barranca de Metztitlán.",
+        descripcion: "Peña del Aire es un impresionante mirador natural donde una colosal roca basáltica parece flotar suspendida en el aire sobre el abismo de una profunda cañada que sobrepasa los 800 metros de profundidad. Es el punto de inicio geográfico de la Reserva de la Biosfera de la Barranca de Metztitlán y un sitio certificado para el astroturismo y la observación de cielos oscuros.",
+        historia: "Durante siglos ha sido punto de referencia para los habitantes de la sierra debido a la ilusión óptica de la roca solitaria que parece desafiar las leyes de la gravedad ante las fuertes corrientes de viento que ascienden desde el fondo del cañón.",
+        atractivos: [
+            "Mirador panorámico a la inmensa barranca",
+            "Roca basáltica en suspensión natural",
+            "Columpio extremo al borde del precipicio",
+            "Tirolesa de 400 metros sobre el cañón",
+            "Certificación de cielo oscuro para astroturismo"
+        ],
+        actividades: [
+            "Subir al columpio extremo sobre el cañón para fotos memorables",
+            "Volar en la tirolesa panorámica",
+            "Rutas de senderismo y paseos a caballo por el borde de la barranca",
+            "Observación de constelaciones y lluvias de estrellas nocturnas"
+        ],
+        recomendaciones: "Suele haber viento fuerte. Lleva chamarra cortaviento y prepárate si padeces de vértigo."
+    },
+
+    // ==========================================
+    // 3. GASTRONOMÍA TRADICIONAL
+    // ==========================================
+    {
+        id: "pastes-hidalgo",
+        nombre: "Pastes Tradicionales de Real del Monte",
+        categoria: "gastronomia",
+        etiqueta: "Gastronomía",
+        ubicacion: "Real del Monte / Pachuca",
+        coordenadas: [20.1417, -98.7333],
+        imagen: "../img/imagen.webp",
+        galeria: [
+            "../img/imagen.webp",
+            "../img/imagen.webp",
+            "../img/imagen.webp"
+        ],
+        resumen: "El platillo con denominación de origen cultural más famoso de Hidalgo, introducido por los mineros ingleses de Cornualles en 1824.",
+        descripcion: "El paste (derivado de la palabra inglesa 'pasty') es el máximo emblema culinario de Hidalgo. Consiste en una masa de harina de trigo rellena de ingredientes que se introducen crudos y se hornean lentamente. El paste original córnico de minero llevaba papa rallada, cebolla picada, carne de res picada y perejil, con un trenzado grueso de masa en la orilla (el 'repulgue') que los mineros usaban para sostenerlo con las manos manchadas de grafito y pólvora en el interior de la mina, tirando el trenzado al final para no envenenarse.",
+        historia: "Hidalgo es el único estado de México hermanado con el condado de Cornualles (Reino Unido). En 2018, el Congreso del Estado declaró a Real del Monte como la Cuna del Paste en México y Patrimonio Cultural Gastronómico de la entidad.",
+        atractivos: [
+            "Museo del Paste en Real del Monte con talleres interactivos",
+            "Pastelerías tradicionales con hornos de piedra centenarios",
+            "Festival Internacional del Paste (octubre)",
+            "Variedad infinita de sabores dulces y salados contemporáneos"
+        ],
+        actividades: [
+            "Elaborar tu propio paste tradicional en los talleres del museo",
+            "Degustación comparativa de pastes clásicos y rellenos autóctonos (frijol con mole, arroz con leche)",
+            "Comprar pastes recién salidos del horno en la plaza de Real del Monte"
+        ],
+        recomendaciones: "Se comen bien calientes, acompañados de un café de olla o chocolate artesanal."
+    },
+    {
+        id: "barbacoa-actopan",
+        nombre: "Barbacoa en Horno de Tierra de Actopan",
+        categoria: "gastronomia",
+        etiqueta: "Gastronomía",
+        ubicacion: "Actopan",
+        coordenadas: [20.2689, -98.9442],
+        imagen: "../img/imagen.webp",
+        galeria: [
+            "../img/imagen.webp",
+            "../img/imagen.webp",
+            "../img/imagen.webp"
+        ],
+        resumen: "Cuna nacional de la barbacoa de borrego cocida a fuego lento bajo tierra en pozo con pencas de maguey y consomé caliente.",
+        descripcion: "Actopan, ubicado en el Valle del Mezquital, es reconocido en toda la República como la Capital de la Barbacoa. La auténtica barbacoa hidalguense se prepara cociendo un borrego tierno entero dentro de un pozo excavado en la tierra con piedras volcánicas al rojo vivo alimentadas con leña de mezquite o encino. La carne se envuelve cuidadosamente en pencas de maguey asadas y se deja hornear lentamente durante 8 a 12 horas mientras los jugos caen en una olla inferior sazonada con garbanzos, arroz y chiles para formar el exquisito consomé.",
+        historia: "Técnica ancestral de origen prehispánico refinada con la introducción del ganado ovino traído por los españoles en el siglo XVI. Cada año en julio se celebra la tradicional Feria de la Barbacoa y el Concurso del Mejor Borrego.",
+        atractivos: [
+            "Feria Tradicional de la Barbacoa en Actopan (julio)",
+            "Mercado de barbacoa dominical de Actopan",
+            "Exconvento de San Nicolás de Tolentino (obra monumental plateresca del siglo XVI)",
+            "Hornos de tierra rústicos a cielo abierto"
+        ],
+        actividades: [
+            "Presenciar la apertura matutina del pozo de tierra humeante",
+            "Disfrutar de tacos de barbacoa con tortillas de comal recién hechas y salsa borracha con pulque",
+            "Acompañar con un plato hondo de consomé caliente con garbanzos y epazote"
+        ],
+        recomendaciones: "Los mejores días para degustarla son los fines de semana por la mañana (entre 8:00 am y 1:00 pm), cuando la carne sale fresca del horno de tierra."
+    },
+    {
+        id: "ximbo-hidalgo",
+        nombre: "Ximbó Tradicional",
+        categoria: "gastronomia",
+        etiqueta: "Gastronomía",
+        ubicacion: "Actopan / San Salvador",
+        coordenadas: [20.2850, -99.0100],
+        imagen: "../img/imagen.webp",
+        galeria: [
+            "../img/imagen.webp",
+            "../img/imagen.webp",
+            "../img/imagen.webp"
+        ],
+        resumen: "Manjar prehispánico otomí envuelto en penca tierna de maguey: pollo, carne de cerdo, chamorro y cueritos al horno de tierra.",
+        descripcion: "El Ximbó (palabra otomí que significa 'corazón o penca tierna de maguey') es una creación gastronómica originaria de los municipios de Actopan y San Salvador en el Valle del Mezquital. Consiste en una deliciosa combinación de pollo marinado en adobo con chiles secos, nopales frescos picados, costilla o chamorro de cerdo y cueritos, todo envuelto en la penca del maguey y cocido al vapor bajo tierra en los mismos hornos donde se cuece la barbacoa.",
+        historia: "Surgió como una alternativa popular en las celebraciones comunitarias otomíes aprovechando la riqueza del maguey pulquero y los hornos de tierra existentes en las haciendas y rancherías del Mezquital.",
+        atractivos: [
+            "Mercados gastronómicos de San Salvador y Actopan",
+            "Muestras culinarias en las ferias del Valle del Mezquital",
+            "Talleres familiares de cocineros tradicionales"
+        ],
+        actividades: [
+            "Comer tacos de ximbó acompañados de nopales tiernos y salsa de molcajete",
+            "Conocer el proceso de desenvoltura de la penca de maguey",
+            "Maridar con pulque blanco o curado de piñón o avena"
+        ],
+        recomendaciones: "Es un platillo sumamente rendidor y jugoso. Pide un taco mixto para probar pollo, chamorro y cuerito en una sola mordida."
+    },
+    {
+        id: "escamoles-chinicuiles",
+        nombre: "Escamoles y Chinicuiles del Valle del Mezquital",
         categoria: "gastronomia",
         etiqueta: "Gastronomía",
         ubicacion: "Valle del Mezquital",
-        coordenadas: [20.4500, -99.2333],
+        coordenadas: [20.4833, -99.2167],
         imagen: "../img/imagen.webp",
         galeria: [
             "../img/imagen.webp",
             "../img/imagen.webp",
             "../img/imagen.webp"
         ],
-        resumen: "Pollo o carne envuelta en penca de maguey y cocida en horno subterráneo.",
-        descripcion: "El ximbo es un platillo tradicional del Valle del Mezquital que consiste en carne (generalmente pollo, conejo o cerdo) sazonada con chiles y especias locales, envuelta en pencas de maguey y cocida lentamente en un horno de tierra. La penca le aporta un sabor ahumado y una textura única a la carne. Es un platillo que representa la relación profunda de los pueblos otomíes con el maguey, planta sagrada que les proporciona alimento, bebida (pulque) y materiales de construcción.",
+        resumen: "El caviar mexicano y los gusanos de maguey: herencia culinaria viva de la cultura Otomí / Hñähñu recolectada en zonas semidesérticas.",
+        descripcion: "Los escamoles son las larvas de la hormiga güijera (Liometopum apiculatum), apodados mundialmente como 'el caviar mexicano' por su textura suave y sabor mantecoso y almendrado inconfundible. Se preparan tradicionalmente salteados con mantequilla, ajo picado, cebolla y hojas de epazote fresco. Por su parte, los chinicuiles son los codiciados gusanos rojos de la raíz del maguey, asados al comal o molidos en salsas de xoconostle.",
+        historia: "Eran manjares tributarios reservados para los tlatoanis mexicas en la época prehispánica. Las comunidades hñähñu han transmitido de generación en generación la delicada técnica de búsqueda subterránea de los nidos respetando el ciclo reproductivo de la hormiga.",
         atractivos: [
-            "Preparación tradicional otomí",
-            "Uso del maguey como envoltorio natural",
-            "Cocción en horno de tierra",
-            "Mercados locales del Valle del Mezquital",
-            "Conexión con la cultura otomí"
+            "Muestra Gastronómica de Santiago de Anaya (la más grande de México en comida tradicional)",
+            "Restaurantes de cocina de autor y tradicional en Ixmiquilpan y Pachuca",
+            "Tianguis comunitarios de temporada de recolección (marzo a mayo)"
         ],
         actividades: [
-            "Degustación en restaurantes y mercados de la región",
-            "Conocer el proceso de preparación",
-            "Visita al Valle del Mezquital",
-            "Aprender sobre la cultura del maguey y el pulque"
+            "Degustar tacos de escamoles a la mantequilla en tortillas de maíz azul",
+            "Aprender sobre entomofagia y saberes etnobotánicos de las cocineras tradicionales",
+            "Probar salsa de chinicuiles molida en molcajete volcánico"
         ],
-        recomendaciones: "Se encuentra principalmente en los mercados y fondas del Valle del Mezquital. Combina la visita con la degustación de pulque natural. Pregunta a los locales por las mejores fondas."
-    },
-    {
-        id: "escamoles",
-        nombre: "Escamoles",
-        categoria: "gastronomia",
-        etiqueta: "Gastronomía",
-        ubicacion: "Región Otomí-Tepehua",
-        coordenadas: [20.3500, -98.9000],
-        imagen: "../img/imagen.webp",
-        galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
-        ],
-        resumen: "Larvas de hormiga consideradas el 'caviar mexicano', manjar prehispánico.",
-        descripcion: "Los escamoles son larvas y pupas de hormiga güijera (Liometopum apiculatum) que se recolectan de los nidos subterráneos entre las raíces de los magueyes y nopales. Conocidos como el 'caviar mexicano' por su sabor delicado y su alto precio, son un manjar prehispánico que se ha consumido en la región desde tiempos ancestrales. Se preparan generalmente salteados con mantequilla, epazote y chile serrano, y se sirven en tacos con tortillas recién hechas. Su temporada de recolección es entre marzo y abril.",
-        atractivos: [
-            "Manjar prehispánico de temporada",
-            "Recolección artesanal tradicional",
-            "Preparación en mantequilla con epazote",
-            "Restaurantes especializados en cocina otomí",
-            "Temporada: marzo-abril"
-        ],
-        actividades: [
-            "Degustación en restaurantes de la región",
-            "Conocer el proceso de recolección",
-            "Visitar mercados durante temporada",
-            "Combinar con otros platillos prehispánicos (gusanos de maguey, chinicuiles)"
-        ],
-        recomendaciones: "Solo están disponibles frescos entre marzo y abril. Son costosos debido a la dificultad de recolección. Pruébalos en tacos con tortilla de maíz recién hecha para la mejor experiencia."
+        recomendaciones: "La temporada de escamoles es en primavera (marzo-abril). No dejes pasar la oportunidad de probarlos con tortilla de maíz criollo recién hecha a mano."
     }
 ];
