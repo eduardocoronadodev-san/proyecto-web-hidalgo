@@ -24,6 +24,36 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
+    function obtenerFavoritos() {
+        try {
+            return JSON.parse(localStorage.getItem('exploraHidalgoFavoritos')) || [];
+        } catch (error) {
+            return [];
+        }
+    }
+
+    function actualizarBotonFavorito() {
+        const boton = document.getElementById('boton-favorito');
+        if (!boton) return;
+        const guardado = obtenerFavoritos().includes(destino.id);
+        boton.classList.toggle('guardado', guardado);
+        boton.setAttribute('aria-pressed', String(guardado));
+        boton.innerHTML = `<i class="fa-${guardado ? 'solid' : 'regular'} fa-heart"></i> ${guardado ? 'Guardado' : 'Guardar'}`;
+    }
+
+    const botonFavorito = document.getElementById('boton-favorito');
+    if (botonFavorito) {
+        actualizarBotonFavorito();
+        botonFavorito.addEventListener('click', function () {
+            const favoritos = obtenerFavoritos();
+            const indice = favoritos.indexOf(destino.id);
+            if (indice === -1) favoritos.push(destino.id);
+            else favoritos.splice(indice, 1);
+            localStorage.setItem('exploraHidalgoFavoritos', JSON.stringify(favoritos));
+            actualizarBotonFavorito();
+        });
+    }
+
     // Actualizar títulos e información principal
     document.title = `${destino.nombre} | Explora Hidalgo`;
     
@@ -35,11 +65,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const ubicacionDestino = document.getElementById('ubicacion-destino');
     if (ubicacionDestino) {
-        ubicacionDestino.innerHTML = `<i class="fa-solid fa-location-dot"></i> ${destino.ubicacion}, Hidalgo`;
+        ubicacionDestino.innerHTML = `<i class="fa-solid ${destino.categoria === 'gastronomia' ? 'fa-utensils' : 'fa-location-dot'}"></i> ${destino.categoria === 'gastronomia' ? 'Se disfruta en ' : ''}${destino.ubicacion}, Hidalgo`;
     }
 
     const descDestino = document.getElementById('descripcion-destino');
     if (descDestino) descDestino.textContent = destino.descripcion;
+
+    if (destino.categoria === 'gastronomia') {
+        const tituloDescripcion = document.getElementById('titulo-descripcion');
+        const tituloAtractivos = document.getElementById('titulo-atractivos');
+        const tituloActividades = document.getElementById('titulo-actividades');
+        const tituloUbicacion = document.getElementById('titulo-ubicacion');
+        if (tituloDescripcion) tituloDescripcion.innerHTML = '<i class="fa-solid fa-circle-info"></i> Sobre este platillo';
+        if (tituloAtractivos) tituloAtractivos.innerHTML = '<i class="fa-solid fa-star"></i> Dónde conocerlo';
+        if (tituloActividades) tituloActividades.innerHTML = '<i class="fa-solid fa-utensils"></i> Cómo disfrutarlo';
+        if (tituloUbicacion) tituloUbicacion.innerHTML = '<i class="fa-solid fa-map-location-dot"></i> Dónde probarlo';
+    }
+
+    const historiaDestino = document.getElementById('historia-destino');
+    const bloqueHistoria = document.getElementById('bloque-historia');
+    if (historiaDestino && bloqueHistoria) {
+        if (destino.historia) {
+            historiaDestino.textContent = destino.historia;
+            bloqueHistoria.style.display = 'block';
+        } else {
+            bloqueHistoria.style.display = 'none';
+        }
+    }
 
     const recDestino = document.getElementById('texto-recomendaciones');
     if (recDestino) recDestino.textContent = destino.recomendaciones;
@@ -48,10 +100,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const etiquetaEl = document.getElementById('etiqueta-categoria');
     if (etiquetaEl) {
         etiquetaEl.className = `insignia-categoria categoria-${destino.categoria}`;
-        let iconoCat = 'fa-landmark';
+        let iconoCat = '<img src="../img/pin-turistico-hidalgo-icono-favicon.png" alt="" class="icono-pin-turistico" aria-hidden="true">';
         if (destino.categoria === 'naturaleza') iconoCat = 'fa-mountain-sun';
         if (destino.categoria === 'gastronomia') iconoCat = 'fa-utensils';
-        etiquetaEl.innerHTML = `<i class="fa-solid ${iconoCat}"></i> ${destino.etiqueta}`;
+        etiquetaEl.innerHTML = `${destino.categoria === 'pueblos-magicos' ? iconoCat : `<i class="fa-solid ${iconoCat}"></i>`} ${destino.etiqueta}`;
     }
 
     // Imagen principal

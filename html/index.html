@@ -8,6 +8,9 @@
         <meta name="author" content="Eduardo Coronado Santana">
         <meta name="description" content="Descubre los destinos turísticos, pueblos mágicos, paisajes y sitios históricos del estado de Hidalgo, México.">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" type="image/png" href="../img/pin-turistico-hidalgo-icono-favicon.png">
+        <link rel="apple-touch-icon" href="../img/pin-turistico-hidalgo-icono-favicon.png">
+        <meta name="theme-color" content="#0f172a">
 
         <!-- Bootstrap 5 CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +31,7 @@
             <nav class="navbar navbar-expand-lg barra-navegacion" id="barra-principal">
                 <div class="container">
                     <a class="navbar-brand marca-nav" href="index.html">
-                        <img src="../img/explora-hidalgo-logo-transparente.webp" alt="Logo Explora Hidalgo" class="logo-nav">
+                        <img src="../img/pin-turistico-hidalgo-icono-favicon.png" alt="Pin turístico de Explora Hidalgo" class="logo-nav">
                         Explora Hidalgo
                     </a>
                     <button class="navbar-toggler boton-hamburguesa" type="button" data-bs-toggle="collapse" data-bs-target="#menu-navegacion" aria-controls="menu-navegacion" aria-expanded="false" aria-label="Abrir menú de navegación">
@@ -109,12 +112,69 @@
                  SECCIÓN INFORMATIVA
                  ========================================== -->
             <section class="seccion-informativa" id="seccion-sobre-hidalgo">
-                <div class="contenedor texto-centro">
-                    <span class="etiqueta-seccion">Descubre Hidalgo</span>
-                    <h2 class="titulo-seccion">Un estado lleno de historia y belleza natural</h2>
-                    <p class="texto-seccion">
-                        Hidalgo es una tierra de contrastes ubicada en el corazón de México. Desde valles y fuentes termales turquesa hasta parques nacionales y una profunda tradición cultural y minera. Cada rincón de este estado te sorprenderá con su riqueza natural, su gastronomía y la calidez de su gente.
-                    </p>
+                <div class="contenedor">
+                    <div class="cabecera-historia texto-centro">
+                        <span class="etiqueta-seccion">Descubre Hidalgo</span>
+                        <h2 class="titulo-seccion">Un estado lleno de historia y belleza natural</h2>
+                    </div>
+                    <div class="contenido-historia-hidalgo">
+                        <div class="texto-historia-hidalgo">
+                            <p>
+                                Hidalgo reúne paisajes muy distintos en un territorio cercano: bosques de montaña, barrancas, valles semidesérticos, aguas termales y pueblos de cantera. Esta diversidad natural convive con una cocina de raíces indígenas y una fuerte identidad minera.
+                            </p>
+                            <p>
+                                Antes de la llegada española, la región fue hogar de pueblos otomíes, toltecas y mexicas. Durante el virreinato, las minas de Pachuca y Mineral del Monte transformaron su economía y dejaron haciendas, caminos y una herencia cultural que sigue viva.
+                            </p>
+                            <p>
+                                El 16 de enero de 1869 se creó el Estado Libre y Soberano de Hidalgo por decreto de Benito Juárez, con Pachuca como capital. Su nombre honra a Miguel Hidalgo y Costilla; hoy, el estado conserva en sus comunidades la memoria de los pueblos originarios, el pulque, el ferrocarril y la minería.
+                            </p>
+                            <a href="explorar.html" class="enlace-historia">Conoce sus destinos <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="galeria-historia-hidalgo" aria-label="Imágenes representativas de Hidalgo">
+                            <!-- Puedes cambiar estas imágenes por tres fotografías históricas o paisajísticas propias. -->
+                            <figure class="foto-historia foto-historia-grande">
+                                <img src="../img/reloj_hidalgo_banner.webp" alt="Reloj Monumental de Pachuca">
+                                <figcaption>Historia minera y urbana</figcaption>
+                            </figure>
+                            <figure class="foto-historia">
+                                <img src="../img/naturaleza.webp" alt="Paisaje natural de Hidalgo">
+                                <figcaption>Naturaleza</figcaption>
+                            </figure>
+                            <figure class="foto-historia">
+                                <img src="../img/gastronomia.webp" alt="Gastronomía tradicional hidalguense">
+                                <figcaption>Sabores tradicionales</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 LEGADO CULTURAL E HISTÓRICO
+                 ========================================== -->
+            <section class="seccion-legado-hidalgo" id="legado-hidalgo">
+                <div class="contenedor contenido-legado-hidalgo">
+                    <div class="imagen-legado-hidalgo">
+                        <!-- Sustituye esta imagen por una fotografía de Tula, el Acueducto o patrimonio hidalguense si cuentas con una propia. -->
+                        <img src="../img/imagen.webp" alt="Paisaje representativo del patrimonio de Hidalgo">
+                    </div>
+                    <div class="texto-legado-hidalgo">
+                        <span class="etiqueta-seccion">Legado que permanece</span>
+                        <h2 class="titulo-seccion">Hidalgo: memoria tolteca, ingeniería virreinal y tradición minera</h2>
+                        <p>
+                            En Tula de Allende se encuentra la antigua Tollan-Xicocotitlan, uno de los centros más importantes del México prehispánico. Sus atlantes representan guerreros toltecas y forman parte de un conjunto arqueológico que permite conocer el desarrollo urbano, artístico y ceremonial de esta cultura.
+                        </p>
+                        <p>
+                            La historia del estado también se reconoce en el Acueducto del Padre Tembleque. Construido entre 1555 y 1572 con la participación de comunidades locales, este sistema hidráulico une conocimientos mesoamericanos y europeos; fue inscrito como Patrimonio Mundial por la UNESCO en 2015.
+                        </p>
+                        <div class="datos-legado-hidalgo">
+                            <div><strong>900 d. C.</strong><span>Inicio del auge de Tula en el Posclásico temprano.</span></div>
+                            <div><strong>1555–1572</strong><span>Construcción del Acueducto del Padre Tembleque.</span></div>
+                            <div><strong>2015</strong><span>Inscripción del acueducto como Patrimonio Mundial.</span></div>
+                        </div>
+                        <p class="fuentes-legado">Fuentes: <a href="https://www.inah.gob.mx/zonas/zona-arqueologica-y-museo-de-sitio-de-tula" target="_blank" rel="noopener noreferrer">INAH</a> y <a href="https://whc.unesco.org/es/list/1463" target="_blank" rel="noopener noreferrer">UNESCO</a>.</p>
+                    </div>
                 </div>
             </section>
 
@@ -132,7 +192,7 @@
                     <div class="rejilla-destacados">
 
                         <!-- Destino 1 -->
-                        <a href="detalle.html?lugar=prismas-basalticos" class="tarjeta-destino" id="destino-prismas">
+                        <a href="detalle.html?id=prismas-basalticos" class="tarjeta-destino" id="destino-prismas">
                             <div class="imagen-destino">
                                 <!-- Reemplaza src con tu imagen -->
                                 <img src="../img/imagen.webp" alt="Prismas Basálticos de Huasca de Ocampo">
@@ -146,7 +206,7 @@
                         </a>
 
                         <!-- Destino 2 -->
-                        <a href="detalle.html?lugar=grutas-tolantongo" class="tarjeta-destino" id="destino-tolantongo">
+                        <a href="detalle.html?id=grutas-tolantongo" class="tarjeta-destino" id="destino-tolantongo">
                             <div class="imagen-destino">
                                 <!-- Reemplaza src con tu imagen -->
                                 <img src="../img/imagen.webp" alt="Grutas de Tolantongo">
@@ -160,7 +220,7 @@
                         </a>
 
                         <!-- Destino 3 -->
-                        <a href="detalle.html?lugar=real-del-monte" class="tarjeta-destino" id="destino-real-del-monte">
+                        <a href="detalle.html?id=real-del-monte" class="tarjeta-destino" id="destino-real-del-monte">
                             <div class="imagen-destino">
                                 <!-- Reemplaza src con tu imagen -->
                                 <img src="../img/imagen.webp" alt="Real del Monte, Pueblo Mágico">
@@ -174,7 +234,7 @@
                         </a>
 
                         <!-- Destino 4 -->
-                        <a href="detalle.html?lugar=huasca-de-ocampo" class="tarjeta-destino" id="destino-huasca">
+                        <a href="detalle.html?id=huasca-de-ocampo" class="tarjeta-destino" id="destino-huasca">
                             <div class="imagen-destino">
                                 <!-- Reemplaza src con tu imagen -->
                                 <img src="../img/imagen.webp" alt="Huasca de Ocampo, Pueblo Mágico">
@@ -224,7 +284,7 @@
 
                     <div class="columna-pie">
                         <div class="logo-pie">
-                            <img src="../img/explora-hidalgo-logo-transparente.webp" alt="Logo Explora Hidalgo" class="logo-pie-imagen">
+                            <img src="../img/pin-turistico-hidalgo-icono-favicon.png" alt="Pin turístico de Explora Hidalgo" class="logo-pie-imagen">
                             <span>Explora Hidalgo</span>
                         </div>
                         <p class="descripcion-pie">Tu portal turístico para descubrir la riqueza cultural, natural e histórica del estado de Hidalgo, México.</p>
