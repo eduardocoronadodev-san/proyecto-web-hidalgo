@@ -1,0 +1,831 @@
+/* ==========================================
+   PORTADA PRINCIPAL
+   ========================================== */
+.portada {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.portada::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.60)
+    );
+}
+
+.contenido-portada {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 90%;
+    max-width: 700px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.contenido-portada h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.contenido-portada h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.contenido-portada p {
+    font-size: 1.1rem;
+    margin-bottom: 28px;
+    opacity: 0.85;
+}
+
+.boton-portada {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+    color: #0f172a;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-shadow: none;
+}
+
+.boton-portada:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    color: #0f172a;
+}
+
+/* ==========================================
+   TARJETAS DE CATEGORÍAS (CARDS)
+   ========================================== */
+
+/* Posicionamiento superpuesto a la portada */
+.seccion-tarjetas {
+    position: relative;
+    margin-top: -60px;
+    z-index: 10;
+}
+
+/* Rejilla de tarjetas con proporción equilibrada */
+.rejilla-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* Estilo base compartido para todas las tarjetas */
+.tarjeta {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+    display: block;
+}
+
+/* Efecto hover */
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* ------------------------------------------
+   Tarjeta clásica (Pueblos Mágicos)
+   ------------------------------------------ */
+.tarjeta-clasica {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.tarjeta-clasica .icono-tarjeta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.tarjeta-clasica #icono-pm {
+    width: 120px;
+    max-width: 55%;
+    height: auto;
+    max-height: 120px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-clasica:hover #icono-pm {
+    transform: rotate(10deg) scale(1.08);
+}
+
+.tarjeta-clasica .titulo-tarjeta {
+    color: #1f2937;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.tarjeta-clasica .descripcion-tarjeta {
+    color: #6b7280;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ------------------------------------------
+   Tarjetas superpuestas (Naturaleza y Gastronomía)
+   Imagen de fondo completa con texto encima
+   ------------------------------------------ */
+.tarjeta-superpuesta {
+    background-color: #1a1a1a;
+}
+
+.tarjeta-superpuesta .imagen-fondo-tarjeta {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.tarjeta-superpuesta:hover .imagen-fondo-tarjeta {
+    transform: scale(1.06);
+}
+
+/* Degradado oscuro para contraste del texto */
+.tarjeta-superpuesta::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.0) 25%,
+        rgba(0, 0, 0, 0.35) 60%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Contenido de texto superpuesto abajo */
+.tarjeta-superpuesta .contenido-tarjeta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 24px 20px;
+}
+
+.tarjeta-superpuesta .titulo-tarjeta {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.tarjeta-superpuesta .descripcion-tarjeta {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin: 0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================
+   SECCIÓN INFORMATIVA
+   ========================================== */
+.seccion-informativa {
+    padding: 5rem 0 3rem 0;
+}
+
+.etiqueta-seccion {
+    display: inline-block;
+    background-color: #0ea5e9;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 18px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.titulo-seccion {
+    font-weight: 800;
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 1rem;
+    letter-spacing: -0.3px;
+}
+
+.texto-seccion {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #6b7280;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.cabecera-historia {
+    margin-bottom: 2.25rem;
+}
+
+.contenido-historia-hidalgo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.95fr);
+    gap: 3rem;
+    align-items: center;
+}
+
+.texto-historia-hidalgo p {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.78;
+    margin: 0 0 1rem;
+}
+
+.enlace-historia {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0.55rem;
+    color: #b45309;
+    font-weight: 800;
+}
+
+.enlace-historia:hover {
+    color: #92400e;
+}
+
+.galeria-historia-hidalgo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 175px 175px;
+    gap: 14px;
+}
+
+.foto-historia {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    margin: 0;
+    background: #e2e8f0;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+.foto-historia-grande {
+    grid-row: span 2;
+}
+
+.foto-historia img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.foto-historia-boton {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: zoom-in;
+}
+
+.foto-historia-boton:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: -3px;
+}
+
+.foto-historia:hover img {
+    transform: scale(1.05);
+}
+
+.foto-historia figcaption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 22px 14px 12px;
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    background: linear-gradient(transparent, rgba(15, 23, 42, 0.82));
+}
+
+.visor-foto-historia {
+    position: fixed;
+    width: min(90vw, 1100px);
+    max-width: none;
+    max-height: 90vh;
+    padding: 2.5rem 1rem 1rem;
+    border: 0;
+    border-radius: 16px;
+    background: #0f172a;
+    color: #fff;
+}
+
+.visor-foto-historia::backdrop {
+    background: rgba(15, 23, 42, 0.85);
+}
+
+.visor-foto-imagen {
+    display: block;
+    width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+.visor-foto-descripcion {
+    margin: 0.75rem 0 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.visor-foto-cerrar {
+    position: absolute;
+    top: 0.35rem;
+    right: 0.75rem;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.seccion-legado-hidalgo {
+    padding: 3rem 0 5rem;
+}
+
+.contenido-legado-hidalgo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.imagen-legado-hidalgo {
+    min-height: 520px;
+    background: #e2e8f0;
+}
+
+.imagen-legado-hidalgo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto-legado-hidalgo {
+    padding: 3.25rem;
+}
+
+.texto-legado-hidalgo .titulo-seccion {
+    font-size: 1.8rem;
+}
+
+.texto-legado-hidalgo > p:not(.fuentes-legado) {
+    color: #475569;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+}
+
+.datos-legado-hidalgo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 1.6rem 0;
+}
+
+.datos-legado-hidalgo div {
+    border-left: 3px solid #d97706;
+    padding: 4px 0 4px 10px;
+}
+
+.datos-legado-hidalgo strong,
+.datos-legado-hidalgo span {
+    display: block;
+}
+
+.datos-legado-hidalgo strong {
+    color: #0f172a;
+    font-size: 1rem;
+}
+
+.datos-legado-hidalgo span,
+.fuentes-legado {
+    color: #64748b;
+    font-size: 0.8rem;
+    line-height: 1.45;
+}
+
+.fuentes-legado {
+    margin: 0;
+}
+
+.fuentes-legado a {
+    color: #b45309;
+    font-weight: 700;
+}
+
+/* ==========================================
+   DESTINOS DESTACADOS
+   ========================================== */
+.seccion-destacados {
+    padding: 2rem 0 5rem 0;
+}
+
+.rejilla-destacados {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 3rem;
+}
+
+.tarjeta-destino {
+    display: block;
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.tarjeta-destino:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.13);
+}
+
+.imagen-destino {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.imagen-destino img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-destino:hover .imagen-destino img {
+    transform: scale(1.06);
+}
+
+.etiqueta-categoria {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.etiqueta-naturaleza {
+    background-color: #10b981;
+}
+
+.etiqueta-pueblo {
+    background-color: #8b5cf6;
+}
+
+.etiqueta-gastronomia {
+    background-color: #f59e0b;
+}
+
+.info-destino {
+    padding: 18px 16px 20px 16px;
+}
+
+.info-destino h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #0f172a;
+}
+
+.ubicacion-destino {
+    font-size: 0.82rem;
+    color: #9ca3af;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ubicacion-destino i {
+    color: #ef4444;
+    font-size: 0.75rem;
+}
+
+.resumen-destino {
+    font-size: 0.88rem;
+    color: #6b7280;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.contenedor-boton-ver-mas {
+    margin-top: 3rem;
+}
+
+.boton-ver-mas {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #0ea5e9;
+    color: #ffffff;
+    padding: 14px 36px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.boton-ver-mas:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(99, 102, 241, 0.35);
+    color: #ffffff;
+    opacity: 0.92;
+}
+
+/* ==========================================
+   LLAMADA A LA ACCIÓN (CTA MAPA)
+   ========================================== */
+.seccion-cta {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+}
+
+.fondo-cta {
+    position: absolute;
+    inset: 0;
+}
+
+.imagen-cta {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.fondo-cta::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(15, 23, 42, 0.88),
+        rgba(99, 102, 241, 0.7)
+    );
+}
+
+.contenido-cta {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #ffffff;
+}
+
+.icono-cta {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    opacity: 0.85;
+}
+
+.contenido-cta h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+}
+
+.contenido-cta p {
+    font-size: 1.1rem;
+    max-width: 550px;
+    margin: 0 auto 28px auto;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.boton-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+    color: #0f172a;
+    padding: 14px 36px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    color: #0f172a;
+}
+
+
+/* ==========================================
+   DISEÑO RESPONSIVO
+   ========================================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .contenido-historia-hidalgo {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contenido-legado-hidalgo {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-legado-hidalgo {
+        min-height: 340px;
+    }
+
+    .rejilla-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .tarjeta-clasica {
+        grid-column: span 2;
+        height: 240px;
+    }
+
+    .tarjeta {
+        height: 280px;
+    }
+
+    .rejilla-destacados {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rejilla-pie {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .contenido-portada h1 {
+        font-size: 2.4rem;
+    }
+}
+
+/* Móviles */
+@media (max-width: 640px) {
+    .seccion-informativa {
+        padding-top: 3.5rem;
+    }
+
+    .contenido-historia-hidalgo {
+        gap: 1.5rem;
+    }
+
+    .galeria-historia-hidalgo {
+        grid-template-rows: 145px 145px;
+        gap: 10px;
+    }
+
+    .seccion-legado-hidalgo {
+        padding: 2rem 0 3.5rem;
+    }
+
+    .imagen-legado-hidalgo {
+        min-height: 250px;
+    }
+
+    .texto-legado-hidalgo {
+        padding: 2rem 1.25rem;
+    }
+
+    .datos-legado-hidalgo {
+        grid-template-columns: 1fr;
+    }
+
+    .portada {
+        height: 500px;
+    }
+
+    .contenido-portada h1 {
+        font-size: 2rem;
+    }
+
+    .contenido-portada h2 {
+        font-size: 1rem;
+    }
+
+    .contenido-portada p {
+        font-size: 0.95rem;
+    }
+
+    .boton-portada {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
+    .seccion-tarjetas {
+        margin-top: -40px;
+    }
+
+    .rejilla-tarjetas {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .tarjeta-clasica {
+        grid-column: span 1;
+        height: 220px;
+    }
+
+    .tarjeta {
+        height: 260px;
+    }
+
+    .titulo-seccion {
+        font-size: 1.6rem;
+    }
+
+    .rejilla-destacados {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .seccion-cta {
+        height: 380px;
+    }
+
+    .contenido-cta h2 {
+        font-size: 1.6rem;
+    }
+
+    .contenido-cta p {
+        font-size: 0.95rem;
+    }
+
+    .rejilla-pie {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}

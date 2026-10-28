@@ -9,7 +9,13 @@ document.addEventListener('DOMContentLoaded', function () {
     if (formulario) {
         formulario.addEventListener('submit', function (evento) {
             evento.preventDefault();
-            alert('¡Gracias por tu mensaje! Tu sugerencia para Explora Hidalgo ha sido recibida con éxito.');
+            Swal.fire({
+                icon: 'success',
+                title: '¡Mensaje recibido!',
+                text: 'Gracias por tu sugerencia para Descubre Hidalgo.',
+                confirmButtonText: 'Aceptar',
+                confirmButtonColor: '#0f172a'
+            });
             formulario.reset();
         });
     }

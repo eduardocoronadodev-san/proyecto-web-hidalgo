@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Actualizar títulos e información principal
-    document.title = `${destino.nombre} | Explora Hidalgo`;
+    document.title = `${destino.nombre} | Descubre Hidalgo`;
     
     const migaNombre = document.getElementById('miga-nombre-destino');
     if (migaNombre) migaNombre.textContent = destino.nombre;

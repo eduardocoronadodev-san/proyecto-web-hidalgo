@@ -1,0 +1,311 @@
+/* ==========================================
+   BARRA DE FILTROS Y BÚSQUEDA (EXPLORAR)
+   ========================================== */
+.seccion-filtros {
+    margin-bottom: 32px;
+}
+
+.fila-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 18px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e8f0;
+}
+
+.caja-buscador {
+    position: relative;
+    flex: 1;
+    min-width: 260px;
+}
+
+.icono-buscador {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+
+.campo-texto {
+    width: 100%;
+    padding: 10px 16px 10px 40px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campo-texto:focus {
+    border-color: #d97706;
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+}
+
+.grupo-botones-filtro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.boton-filtro {
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.boton-filtro:hover {
+    background-color: #e2e8f0;
+    color: #0f172a;
+}
+
+.boton-filtro.activo {
+    background-color: #0f172a;
+    border-color: #0f172a;
+    color: #ffffff;
+}
+
+.contador-resultados {
+    margin-top: 14px;
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+
+/* ==========================================
+   REJILLA DE DESTINOS (CATÁLOGO)
+   ========================================== */
+.seccion-catalogo {
+    padding-bottom: 70px;
+}
+
+.rejilla-catalogo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.tarjeta-destino {
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarjeta-destino:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.espacio-imagen-destino {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    background-color: #e2e8f0;
+    overflow: hidden;
+}
+
+.imagen-destino {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.tarjeta-destino:hover .imagen-destino {
+    transform: scale(1.05);
+}
+
+.espacio-imagen-destino .insignia-categoria {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.cuerpo-tarjeta-destino {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.titulo-destino {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.ubicacion-destino {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ubicacion-destino i {
+    color: #d97706;
+}
+
+.resumen-destino {
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.55;
+    margin-bottom: 18px;
+    flex: 1;
+}
+
+.pie-tarjeta-destino {
+    border-top: 1px solid #f1f5f9;
+    padding-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.boton-ver-detalle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #d97706;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.boton-ver-detalle:hover {
+    color: #b45309;
+    transform: translateX(4px);
+}
+
+.boton-favorito,
+.boton-favorito-detalle {
+    border: 1px solid #fecaca;
+    background: #fff;
+    color: #dc2626;
+    cursor: pointer;
+    font-weight: 700;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.boton-favorito {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    flex: 0 0 auto;
+}
+
+.boton-favorito-detalle {
+    margin-left: 10px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
+
+.boton-favorito:hover,
+.boton-favorito-detalle:hover,
+.boton-favorito.guardado,
+.boton-favorito-detalle.guardado {
+    background: #dc2626;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.boton-favorito:focus-visible,
+.boton-favorito-detalle:focus-visible {
+    outline: 3px solid rgba(220, 38, 38, 0.25);
+    outline-offset: 2px;
+}
+
+/* Mensaje sin resultados */
+.mensaje-vacio {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    border: 1px dashed #cbd5e1;
+}
+
+.icono-vacio {
+    font-size: 3rem;
+    color: #94a3b8;
+    margin-bottom: 16px;
+}
+
+.mensaje-vacio h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.mensaje-vacio p {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.boton-reiniciar-filtro {
+    background-color: #0f172a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.boton-reiniciar-filtro:hover {
+    background-color: #1e293b;
+}
+@media (max-width: 992px) {
+    .rejilla-catalogo {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .titulo-encabezado {
+        font-size: 1.8rem;
+    }
+
+    .descripcion-encabezado {
+        font-size: 0.95rem;
+    }
+
+    .fila-filtros {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .grupo-botones-filtro {
+        justify-content: flex-start;
+    }
+
+    .rejilla-catalogo {
+        grid-template-columns: 1fr;
+    }
+}

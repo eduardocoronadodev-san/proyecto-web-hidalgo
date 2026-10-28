@@ -1,0 +1,314 @@
+/* ==========================================
+   ESTILOS DE LA PÁGINA DETALLE
+   ========================================== */
+.principal-detalle {
+    padding-bottom: 80px;
+}
+
+.seccion-cabecera-detalle {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 24px 0 32px 0;
+    margin-bottom: 32px;
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
+.seccion-cabecera-detalle::before,
+.seccion-cabecera-detalle::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.seccion-cabecera-detalle::before {
+    inset: -8px;
+    background: url('../img/reloj_hidalgo_banner.webp') center 42% / cover no-repeat;
+    filter: blur(5px);
+    transform: scale(1.03);
+}
+
+.seccion-cabecera-detalle::after {
+    background: linear-gradient(115deg, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.72));
+}
+
+.seccion-cabecera-detalle > .contenedor {
+    position: relative;
+}
+
+.migas-de-pan .breadcrumb {
+    margin-bottom: 16px;
+    font-size: 0.88rem;
+}
+
+.migas-de-pan a {
+    color: rgba(255, 255, 255, 0.78);
+    transition: color 0.2s;
+}
+
+.migas-de-pan a:hover {
+    color: #fbbf24;
+}
+
+.migas-de-pan .breadcrumb-item.active,
+.migas-de-pan .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.58);
+}
+
+.titulo-detalle {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 8px 0;
+}
+
+.ubicacion-detalle {
+    font-size: 1.05rem;
+    color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ubicacion-detalle i {
+    color: #d97706;
+}
+
+/* Espacio imagen principal grande en detalle */
+.espacio-imagen-principal {
+    width: 100%;
+    height: 440px;
+    background-color: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 36px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.imagen-principal-grande {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.fila-detalle {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 36px;
+    align-items: start;
+}
+
+.bloque-detalle {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 24px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.subtitulo-detalle {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subtitulo-detalle i {
+    color: #d97706;
+}
+
+.parrafo-descripcion {
+    font-size: 1.05rem;
+    color: #334155;
+    line-height: 1.75;
+}
+
+.lista-atractivos,
+.lista-actividades {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lista-atractivos li,
+.lista-actividades li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.98rem;
+    color: #334155;
+    line-height: 1.5;
+}
+
+.lista-atractivos li i {
+    color: #d97706;
+    margin-top: 4px;
+}
+
+.lista-actividades li i {
+    color: #059669;
+    margin-top: 4px;
+}
+
+.rejilla-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.espacio-foto-galeria {
+    height: 150px;
+    background-color: #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.foto-galeria {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.espacio-foto-galeria:hover .foto-galeria {
+    transform: scale(1.08);
+}
+
+/* Columna lateral */
+.columna-lateral-detalle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 96px;
+}
+
+.tarjeta-lateral {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.tarjeta-consejos {
+    border-left: 5px solid #d97706;
+}
+
+.titulo-tarjeta-lateral {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tarjeta-consejos .titulo-tarjeta-lateral i {
+    color: #d97706;
+}
+
+.texto-recomendaciones {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.caja-mapa-miniatura {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    border: 1px solid #cbd5e1;
+}
+
+.boton-abrir-mapa-completo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #1e293b;
+    transition: background-color 0.2s;
+}
+
+.boton-abrir-mapa-completo:hover {
+    background-color: #e2e8f0;
+}
+
+.boton-volver-catalogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    background-color: #0f172a;
+    color: #ffffff;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+
+.boton-volver-catalogo:hover {
+    background-color: #1e293b;
+    color: #ffffff;
+}
+
+.seccion-sugeridos {
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.rejilla-sugeridos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 28px;
+}
+@media (max-width: 992px) {
+    .fila-detalle {
+        grid-template-columns: 1fr;
+    }
+
+    .columna-lateral-detalle {
+        position: static;
+    }
+}
+
+@media (max-width: 640px) {
+    .espacio-imagen-principal {
+        height: 280px;
+    }
+
+    .titulo-detalle {
+        font-size: 1.8rem;
+    }
+
+    .rejilla-galeria,
+    .rejilla-sugeridos {
+        grid-template-columns: 1fr;
+    }
+}

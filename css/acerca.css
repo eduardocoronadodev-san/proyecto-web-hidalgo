@@ -1,0 +1,215 @@
+/* ==========================================
+   ESTILOS DE LA PÁGINA ACERCA DE
+   ========================================= */
+.seccion-acerca-contenido {
+    margin-bottom: 50px;
+}
+
+.rejilla-dos-columnas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.tarjeta-informacion-acerca {
+    background-color: #ffffff;
+    padding: 36px 32px;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.icono-acerca {
+    width: 52px;
+    height: 52px;
+    background-color: #fef3c7;
+    color: #d97706;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+}
+
+.tarjeta-informacion-acerca h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.tarjeta-informacion-acerca p {
+    color: #475569;
+    line-height: 1.65;
+    font-size: 0.98rem;
+}
+
+.seccion-pilares {
+    padding: 60px 0;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 50px;
+}
+
+.encabezado-seccion-bloque {
+    margin-bottom: 40px;
+}
+
+.subtitulo-seccion {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #d97706;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.rejilla-tres-columnas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.tarjeta-pilar {
+    background-color: #f8fafc;
+    padding: 28px 24px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+.icono-pilar {
+    width: 48px;
+    height: 48px;
+    background-color: #e0f2fe;
+    color: #0284c7;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+}
+
+.tarjeta-pilar:nth-child(1) .icono-pilar {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.tarjeta-pilar:nth-child(2) .icono-pilar {
+    background-color: #d1fae5;
+    color: #059669;
+}
+
+.tarjeta-pilar:nth-child(3) .icono-pilar {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.tarjeta-pilar h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.tarjeta-pilar p {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* Formulario de contacto */
+.seccion-contacto {
+    padding-bottom: 70px;
+}
+
+.caja-formulario-contacto {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.formulario-estilizado {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fila-formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.etiqueta-formulario {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.campo-entrada {
+    padding: 11px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo-entrada:focus {
+    border-color: #d97706;
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+}
+
+.area-texto {
+    resize: vertical;
+}
+
+.boton-enviar-formulario {
+    background-color: #0f172a;
+    color: #ffffff;
+    border: none;
+    padding: 13px 36px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.boton-enviar-formulario:hover {
+    background-color: #1e293b;
+}
+@media (max-width: 992px) {
+    .rejilla-tres-columnas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .rejilla-dos-columnas,
+    .rejilla-tres-columnas,
+    .fila-formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .caja-formulario-contacto {
+        padding: 24px 18px;
+    }
+}
