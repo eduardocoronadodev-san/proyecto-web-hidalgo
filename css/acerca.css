@@ -45,78 +45,12 @@
     font-size: 0.98rem;
 }
 
-.seccion-pilares {
-    padding: 60px 0;
-    background-color: #ffffff;
-    border-top: 1px solid #e2e8f0;
-    border-bottom: 1px solid #e2e8f0;
-    margin-bottom: 50px;
-}
-
-.encabezado-seccion-bloque {
-    margin-bottom: 40px;
-}
-
 .subtitulo-seccion {
     font-size: 0.85rem;
     font-weight: 700;
     color: #d97706;
     text-transform: uppercase;
     letter-spacing: 1px;
-}
-
-.rejilla-tres-columnas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-.tarjeta-pilar {
-    background-color: #f8fafc;
-    padding: 28px 24px;
-    border-radius: 16px;
-    border: 1px solid #e2e8f0;
-}
-
-.icono-pilar {
-    width: 48px;
-    height: 48px;
-    background-color: #e0f2fe;
-    color: #0284c7;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    margin-bottom: 16px;
-}
-
-.tarjeta-pilar:nth-child(1) .icono-pilar {
-    background-color: #fef3c7;
-    color: #d97706;
-}
-
-.tarjeta-pilar:nth-child(2) .icono-pilar {
-    background-color: #d1fae5;
-    color: #059669;
-}
-
-.tarjeta-pilar:nth-child(3) .icono-pilar {
-    background-color: #fee2e2;
-    color: #dc2626;
-}
-
-.tarjeta-pilar h3 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 8px;
-}
-
-.tarjeta-pilar p {
-    font-size: 0.92rem;
-    color: #475569;
-    line-height: 1.6;
 }
 
 /* Formulario de contacto */
@@ -196,15 +130,8 @@
 .boton-enviar-formulario:hover {
     background-color: #1e293b;
 }
-@media (max-width: 992px) {
-    .rejilla-tres-columnas {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 @media (max-width: 640px) {
     .rejilla-dos-columnas,
-    .rejilla-tres-columnas,
     .fila-formulario {
         grid-template-columns: 1fr;
     }
