@@ -16,11 +16,11 @@ const DESTINOS = [
         etiqueta: "Pueblo Mágico (2001)",
         ubicacion: "Huasca de Ocampo",
         coordenadas: [20.2036, -98.5764],
-        imagen: "../img/imagen.webp",
+        imagen: "../img/huasca-de-ocampo.webp",
         galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
+            "../img/huasca-de-ocampo2.webp",
+            "../img/huasca-de-ocampo3.webp",
+            "../img/huasca-de-ocampo4.webp"
         ],
         resumen: "El primer Pueblo Mágico de México (2001). Cuna de las opulentas haciendas de beneficio del Conde de Regla, bosques de niebla y leyendas de duendes.",
         descripcion: "Huasca de Ocampo tiene el honor histórico de haber sido el primer destino de toda la República Mexicana en recibir el nombramiento de Pueblo Mágico el 5 de octubre de 2001. Enclavado en el Corredor de la Montaña, su historia colonial despegó en el siglo XVIII gracias a Pedro Romero de Terreros (el primer Conde de Regla), quien fundó las monumentales haciendas de beneficio de plata y oro como San Miguel Regla, Santa María Regla y San Antonio Regla. El pueblo conserva pintorescas casas de techos de dos aguas de teja roja, callejones de piedra volcánica y un místico entorno boscoso envuelto en leyendas populares.",
@@ -49,11 +49,11 @@ const DESTINOS = [
         etiqueta: "Pueblo Mágico (2004)",
         ubicacion: "Mineral del Monte",
         coordenadas: [20.1292, -98.6744],
-        imagen: "../img/imagen.webp",
+        imagen: "../img/Real_del_monte1.webp",
         galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
+            "../img/Real_del_monte2.webp",
+            "../img/Real_del_monte3.webp",
+            "../img/Real_del_monte4.webp"
         ],
         resumen: "Pueblo minero a más de 2,660 msnm con arquitectura córnico-británica, cuna del paste tradicional y del primer partido de fútbol en México.",
         descripcion: "Real del Monte (oficialmente Mineral del Monte) es uno de los centros mineros más antiguos y emblemáticos de América. Ubicado en las alturas de la Sierra de Pachuca, suele estar cubierto por una mística niebla que enmarca sus techumbres de lámina roja y chimeneas victorianas. Tras la Independencia, en 1824 llegaron ingenieros y mineros de Cornualles (Inglaterra) para rehabilitar las minas inundadas, aportando tecnología de vapor, arquitectura europea, la afición al fútbol soccer, el golf y la herencia gastronómica cumbre del estado: el paste (cornish pasty).",
@@ -82,11 +82,11 @@ const DESTINOS = [
         etiqueta: "Pueblo Mágico (2011)",
         ubicacion: "Mineral del Chico",
         coordenadas: [20.2158, -98.7303],
-        imagen: "../img/imagen.webp",
+        imagen: "../img/mineral-chico.webp",
         galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
+            "../img/mineral-chico2.webp",
+            "../img/mineral-chico3.webp",
+            "../img/mineral-chico4.webp"
         ],
         resumen: "Corazón del Parque Nacional El Chico (el primer bosque protegido de México, 1898), paraíso del ecoturismo, la escalada en roca y cañonismo.",
         descripcion: "Mineral del Chico es un oasis de paz alpino rodeado por más de 2,700 hectáreas de frondosos bosques de oyamel, pino y encino. Fundado como Real de Atotonilco en 1565 tras el hallazgo de minas de plata, su fisonomía destaca por pintorescas casas de techumbres rojas y la torre de la Parroquia de la Purísima Concepción. Es la capital indiscutible del turismo de aventura y ecoturismo en el centro del país.",
@@ -115,11 +115,11 @@ const DESTINOS = [
         etiqueta: "Pueblo Mágico (2012)",
         ubicacion: "Huichapan",
         coordenadas: [20.3756, -99.6508],
-        imagen: "../img/imagen.webp",
+        imagen: "../img/huichapan1.webp",
         galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
+            "../img/huichapan2.webp",
+            "../img/Huichapan3.webp",
+            "../img/Huichapan4.webp"
         ],
         resumen: "Cuna cívica donde se festejó por primera vez el Grito de Independencia en 1812. Famoso por su colosal acueducto El Saucillo y balnearios termales.",
         descripcion: "Huichapan deslumbra por su armoniosa arquitectura de cantera blanca y rosa, monumentales plazas arboladas, balnearios de aguas termales y un papel protagónico en la historia nacional. En el balcón del edificio histórico 'El Chapitel', el General Ignacio López Rayón y Andrés Quintana Roo conmemoraron por primera vez en la historia de México el Grito de Dolores el 16 de septiembre de 1812.",
@@ -148,11 +148,11 @@ const DESTINOS = [
         etiqueta: "Pueblo Mágico (2015)",
         ubicacion: "Tecozautla",
         coordenadas: [20.5333, -99.6333],
-        imagen: "../img/imagen.webp",
+        imagen: "../img/tecosautla1.webp",
         galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
+            "../img/tecosautla2.webp",
+            "../img/tecosautla3.webp",
+            "../img/tecosautla4.webp"
         ],
         resumen: "Oasis de aguas termales en un valle de huertos y nogales, hogar de El Géiser (respiradero volcánico a 95°C) y el Reloj Monumental de cantera.",
         descripcion: "Tecozautla se ubica en un valle fértil salpicado de huertos de nuez de castilla, cactáceas y manantiales hidrotermales. Su símbolo urbano más reconocido es el majestuoso Torreón o Reloj Monumental de estilo neoclásico porfiriano labrado en cantera pura. Su gran imán turístico es la abundancia de balnearios naturales alimentados por fallas geológicas activas, destacando el impresionante respiradero volcánico de El Géiser.",
@@ -181,11 +181,11 @@ const DESTINOS = [
         etiqueta: "Pueblo Mágico (2018)",
         ubicacion: "Zimapan",
         coordenadas: [20.7383, -99.3808],
-        imagen: "../img/imagen.webp",
+        imagen: "../img/zimapan.webp",
         galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
+            "../img/zimapan2.webp",
+            "../img/zimapan3.webp",
+            "../img/zimapan4.webp"
         ],
         resumen: "Puerta a la Sierra Gorda hidalguense, cuna del descubrimiento del elemento Vanadio (1801), hogar de la imponente Presa Zimapán y Los Mármoles.",
         descripcion: "Zimapán es el municipio geográficamente más extenso de Hidalgo. Enclavado en la transición hacia la Sierra Gorda, cuenta con una riqueza geológica asombrosa. En sus minas, el mineralogista Andrés Manuel del Río descubrió en 1801 un nuevo elemento químico de la tabla periódica: el Vanadio (inicialmente llamado eritronio). El pueblo ofrece un colosal patrimonio natural con cañones verticales de más de 400 metros de altura, presas navegables y un árbol sabino milenario en el corazón del pueblo.",
@@ -214,11 +214,11 @@ const DESTINOS = [
         etiqueta: "Pueblo Mágico (2020)",
         ubicacion: "Zempoala",
         coordenadas: [19.9158, -98.6694],
-        imagen: "../img/imagen.webp",
+        imagen: "../img/zempoala.webp",
         galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
+            "../img/zempoala2.webp",
+            "../img/zempoala3.webp",
+            "../img/zempoala4.webp"
         ],
         resumen: "Cuna del monumental Acueducto del Padre Tembleque (Patrimonio Mundial de la UNESCO) y de legendarias haciendas pulqueras y ganaderas.",
         descripcion: "Zempoala respira tranquilidad virreinal e historia viva. Reconocido como Pueblo Mágico en diciembre de 2020, es célebre internacionalmente por albergar la monumental arquería mayor del Acueducto del Padre Tembleque, la obra hidráulica más importante del siglo XVI en América, inscrita en la lista del Patrimonio Mundial de la UNESCO. Asimismo, el municipio conserva una treintena de históricas haciendas ganaderas y pulqueras rodeadas de valles magueyeros.",
@@ -246,11 +246,11 @@ const DESTINOS = [
         etiqueta: "Pueblo Mágico (2023)",
         ubicacion: "Acaxochitlán",
         coordenadas: [20.1583, -98.2042],
-        imagen: "../img/imagen.webp",
+        imagen: "../img/acaxochitlan1.webp",
         galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
+            "../img/acaxochitlan2.webp",
+            "../img/acaxochitlan3.webp",
+            "../img/acaxochitlan4.webp"
         ],
         resumen: "Pueblo Mágico incorporado en 2023. Paraíso de bosques húmedos, medicina tradicional otomí y náhuatl, textiles en telar de cintura y cascadas.",
         descripcion: "Acaxochitlán ('lugar donde florece el acaxóchitl') se localiza en los límites de la Sierra de Tenango y la Sierra Norte. Incorporado al programa de Pueblos Mágicos en 2023, destaca por la preservación intacta de sus culturas originarias otomí y náhuatl. El paisaje está envuelto en densas neblinas, presas rodeadas de bosques de pino-encino, olor a pan tradicional cocinado en hornos de leña y cascadas majestuosas como Chimalapa.",
@@ -278,11 +278,11 @@ const DESTINOS = [
         etiqueta: "Pueblo Mágico (2023)",
         ubicacion: "Metztitlan",
         coordenadas: [20.5961, -98.7631],
-        imagen: "../img/imagen.webp",
+        imagen: "../img/metztitlan1.webp",
         galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
+            "../img/metztitlan2.webp",
+            "../img/metztitlan3.webp",
+            "../img/metztitlan4.webp"
         ],
         resumen: "Pueblo Mágico incorporado en 2023. Centro de la Reserva de la Biosfera Barranca de Metztitlán, con su imponente Convento Agustino del siglo XVI.",
         descripcion: "Metztitlán ('lugar de la luna') se sitúa en el corazón de una de las reservas ecológicas más impresionantes de México: la Reserva de la Biosfera Barranca de Metztitlán. En contraste con sus profundos cañones poblados por densas colonias de cactus gigantes (candelabros y viejitos), su vega agrícola es sumamente fértil. En lo alto domina el Convento de los Santos Reyes, una de las construcciones virreinales más fastuosas del siglo XVI.",
@@ -315,11 +315,11 @@ const DESTINOS = [
         etiqueta: "Naturaleza",
         ubicacion: "Huasca de Ocampo",
         coordenadas: [20.2333, -98.5833],
-        imagen: "../img/imagen.webp",
+        imagen: "../img/image.png (1).png",
         galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
+            "../img/image.png (2).png",
+            "../img/image.png (3).png",
+            "../img/image.png.png"
         ],
         resumen: "Una de las maravillas naturales geológicas más impresionantes del mundo: columnas geométricas de basalto bañadas por cascadas de agua.",
         descripcion: "Los Prismas Basálticos son formaciones columnares poligonales (de 5 y 6 caras) de roca ígnea volcánica formadas hace aproximadamente 2.5 millones de años por el enfriamiento lento de coladas de lava. Estas imponentes columnas alcanzan más de 30 metros de altura y revisten las paredes de la barranca de Santa María Regla, bañadas permanentemente por cuatro saltos de agua cristalina provenientes de la presa de San Antonio Regla. Fueron inmortalizados en grabados en 1803 por el célebre explorador alemán Alexander von Humboldt.",
@@ -347,11 +347,10 @@ const DESTINOS = [
         etiqueta: "Naturaleza",
         ubicacion: "Cardonal",
         coordenadas: [20.6489, -98.9953],
-        imagen: "../img/imagen.webp",
+        imagen: "../img/grutas1.webp",
         galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
+            "../img/grutas2.webp",
+            "../img/grutas3.webp"
         ],
         resumen: "Paraíso de pozas termales turquesa escalonadas en el cañón, río cálido, gruta con cascada interior y túneles de vapor natural a 38°C.",
         descripcion: "Las Grutas de Tolantongo constituyen uno de los parques naturales termales más espectaculares de América Latina. Enclavadas en un cañón de la Sierra Madre Oriental en el municipio de Cardonal, las aguas termales emergen de la montaña a una agradable temperatura de entre 36°C y 38°C, ricas en sales minerales que le otorgan un inconfundible y deslumbrante color azul turquesa. El complejo está administrado de forma ejidal cooperativa comunitaria sustentable.",
@@ -380,11 +379,11 @@ const DESTINOS = [
         etiqueta: "Naturaleza",
         ubicacion: "Pacula",
         coordenadas: [21.0500, -99.3000],
-        imagen: "../img/imagen.webp",
+        imagen: "../img/dunas1.webp",
         galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
+            "../img/dunas2.webp",
+            "../img/dunas3.webp",
+            "../img/dunas4.webp"
         ],
         resumen: "El 'paisaje marciano' de Hidalgo: colinas de arena y arcilla roja intensa rodeadas de piedras calizas y pinos en la sierra.",
         descripcion: "Las Dunas Rojas de Pacula son un capricho geológico único en el centro de México. En medio del bosque serrano entre Pacula y Zimapán, se extiende un terreno de arena rojiza aterciopelada cuyo color se debe a la altísima concentración de óxido de hierro y minerales de laterita. El contraste entre la tierra escarlata, las rocas calizas blanquecinas y el verde de los pinos hace que caminar por aquí parezca estar en la superficie del planeta Marte.",
@@ -410,11 +409,11 @@ const DESTINOS = [
         etiqueta: "Naturaleza",
         ubicacion: "Huasca de Ocampo",
         coordenadas: [20.2500, -98.5333],
-        imagen: "../img/imagen.webp",
+        imagen: "../img/pena-del-aire1.webp",
         galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
+            "../img/pena-del-aire2.webp",
+            "../img/pena-del-aire3.webp",
+            "../img/pena-del-aire4.webp"
         ],
         resumen: "Enorme roca basáltica en equilibrio al borde de un abismo de 800 metros en la Reserva de la Biosfera Barranca de Metztitlán.",
         descripcion: "Peña del Aire es un impresionante mirador natural donde una colosal roca basáltica parece flotar suspendida en el aire sobre el abismo de una profunda cañada que sobrepasa los 800 metros de profundidad. Es el punto de inicio geográfico de la Reserva de la Biosfera de la Barranca de Metztitlán y un sitio certificado para el astroturismo y la observación de cielos oscuros.",
@@ -445,11 +444,11 @@ const DESTINOS = [
         etiqueta: "Gastronomía",
         ubicacion: "Real del Monte / Pachuca",
         coordenadas: [20.1417, -98.7333],
-        imagen: "../img/imagen.webp",
+        imagen: "../img/pastes1.webp",
         galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
+            "../img/pastes2.webp",
+            "../img/pastes3.webp",
+            "../img/pastes4.webp"
         ],
         resumen: "El platillo con denominación de origen cultural más famoso de Hidalgo, introducido por los mineros ingleses de Cornualles en 1824.",
         descripcion: "El paste (derivado de la palabra inglesa 'pasty') es el máximo emblema culinario de Hidalgo. Consiste en una masa de harina de trigo rellena de ingredientes que se introducen crudos y se hornean lentamente. El paste original córnico de minero llevaba papa rallada, cebolla picada, carne de res picada y perejil, con un trenzado grueso de masa en la orilla (el 'repulgue') que los mineros usaban para sostenerlo con las manos manchadas de grafito y pólvora en el interior de la mina, tirando el trenzado al final para no envenenarse.",
@@ -474,11 +473,11 @@ const DESTINOS = [
         etiqueta: "Gastronomía",
         ubicacion: "Actopan",
         coordenadas: [20.2689, -98.9442],
-        imagen: "../img/imagen.webp",
+        imagen: "../img/barbacoa1.jpg",
         galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
+            "../img/barbacoa2.jpg",
+            "../img/barbacoa3.jpg",
+            "../img/barbacoa4.jpg"
         ],
         resumen: "Cuna nacional de la barbacoa de borrego cocida a fuego lento bajo tierra en pozo con pencas de maguey y consomé caliente.",
         descripcion: "Actopan, ubicado en el Valle del Mezquital, es reconocido en toda la República como la Capital de la Barbacoa. La auténtica barbacoa hidalguense se prepara cociendo un borrego tierno entero dentro de un pozo excavado en la tierra con piedras volcánicas al rojo vivo alimentadas con leña de mezquite o encino. La carne se envuelve cuidadosamente en pencas de maguey asadas y se deja hornear lentamente durante 8 a 12 horas mientras los jugos caen en una olla inferior sazonada con garbanzos, arroz y chiles para formar el exquisito consomé.",
@@ -503,11 +502,11 @@ const DESTINOS = [
         etiqueta: "Gastronomía",
         ubicacion: "Actopan / San Salvador",
         coordenadas: [20.2850, -99.0100],
-        imagen: "../img/imagen.webp",
+        imagen: "../img/ximbo1.webp",
         galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
+            "../img/ximbo2.webp",
+            "../img/ximbo3.webp",
+            "../img/ximbo4.webp"
         ],
         resumen: "Manjar prehispánico otomí envuelto en penca tierna de maguey: pollo, carne de cerdo, chamorro y cueritos al horno de tierra.",
         descripcion: "El Ximbó (palabra otomí que significa 'corazón o penca tierna de maguey') es una creación gastronómica originaria de los municipios de Actopan y San Salvador en el Valle del Mezquital. Consiste en una deliciosa combinación de pollo marinado en adobo con chiles secos, nopales frescos picados, costilla o chamorro de cerdo y cueritos, todo envuelto en la penca del maguey y cocido al vapor bajo tierra en los mismos hornos donde se cuece la barbacoa.",
@@ -531,11 +530,11 @@ const DESTINOS = [
         etiqueta: "Gastronomía",
         ubicacion: "Valle del Mezquital",
         coordenadas: [20.4833, -99.2167],
-        imagen: "../img/imagen.webp",
+        imagen: "../img/chinicuiles0.webp",
         galeria: [
-            "../img/imagen.webp",
-            "../img/imagen.webp",
-            "../img/imagen.webp"
+            "../img/chinicuiles1.webp",
+            "../img/chinicuiles2.webp",
+            "../img/chinicuiles4.webp"
         ],
         resumen: "El caviar mexicano y los gusanos de maguey: herencia culinaria viva de la cultura Otomí / Hñähñu recolectada en zonas semidesérticas.",
         descripcion: "Los escamoles son las larvas de la hormiga güijera (Liometopum apiculatum), apodados mundialmente como 'el caviar mexicano' por su textura suave y sabor mantecoso y almendrado inconfundible. Se preparan tradicionalmente salteados con mantequilla, ajo picado, cebolla y hojas de epazote fresco. Por su parte, los chinicuiles son los codiciados gusanos rojos de la raíz del maguey, asados al comal o molidos en salsas de xoconostle.",
