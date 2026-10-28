@@ -97,9 +97,14 @@
 
 .fila-detalle {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
     gap: 36px;
     align-items: start;
+}
+
+.columna-informacion-detalle,
+.columna-lateral-detalle {
+    min-width: 0;
 }
 
 .bloque-detalle {
@@ -163,7 +168,7 @@
 
 .rejilla-galeria {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
 }
 
@@ -284,10 +289,117 @@
 
 .rejilla-sugeridos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
     margin-top: 28px;
 }
+
+/* Cards de destinos sugeridos, con el mismo patrón visual del catálogo. */
+.rejilla-sugeridos > .tarjeta-destino {
+    min-width: 0;
+    min-height: 100%;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rejilla-sugeridos > .tarjeta-destino:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.rejilla-sugeridos .espacio-imagen-destino {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    flex: 0 0 auto;
+    overflow: hidden;
+    background-color: #e2e8f0;
+}
+
+.rejilla-sugeridos .imagen-destino {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.rejilla-sugeridos .tarjeta-destino:hover .imagen-destino {
+    transform: scale(1.05);
+}
+
+.rejilla-sugeridos .espacio-imagen-destino .insignia-categoria {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+}
+
+.rejilla-sugeridos .cuerpo-tarjeta-destino {
+    min-width: 0;
+    padding: 22px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.rejilla-sugeridos .titulo-destino {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 6px;
+    overflow-wrap: anywhere;
+}
+
+.rejilla-sugeridos .ubicacion-destino {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.rejilla-sugeridos .ubicacion-destino i {
+    flex: 0 0 auto;
+    color: #d97706;
+    margin-top: 3px;
+}
+
+.rejilla-sugeridos .resumen-destino {
+    flex: 1;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #475569;
+    margin-bottom: 18px;
+}
+
+.rejilla-sugeridos .pie-tarjeta-destino {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 14px;
+}
+
+.rejilla-sugeridos .boton-ver-detalle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #d97706;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.rejilla-sugeridos .boton-ver-detalle:hover {
+    color: #b45309;
+}
+
 @media (max-width: 992px) {
     .fila-detalle {
         grid-template-columns: 1fr;
@@ -296,19 +408,58 @@
     .columna-lateral-detalle {
         position: static;
     }
+
+    .rejilla-sugeridos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 640px) {
+    .seccion-cabecera-detalle {
+        padding: 20px 0 26px;
+        margin-bottom: 24px;
+    }
+
+    .migas-de-pan .breadcrumb {
+        flex-wrap: wrap;
+        row-gap: 4px;
+        font-size: 0.78rem;
+    }
+
     .espacio-imagen-principal {
-        height: 280px;
+        height: clamp(190px, 62vw, 280px);
+        margin-bottom: 24px;
+        border-radius: 14px;
     }
 
     .titulo-detalle {
-        font-size: 1.8rem;
+        font-size: clamp(1.6rem, 7vw, 1.9rem);
+        overflow-wrap: anywhere;
     }
 
-    .rejilla-galeria,
+    .bloque-detalle,
+    .tarjeta-lateral {
+        padding: 20px;
+    }
+
+    .subtitulo-detalle {
+        font-size: 1.15rem;
+    }
+
+    .rejilla-galeria {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .rejilla-sugeridos {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .rejilla-sugeridos .espacio-imagen-destino {
+        height: 200px;
+    }
+
+    .rejilla-sugeridos .cuerpo-tarjeta-destino {
+        padding: 18px;
     }
 }
