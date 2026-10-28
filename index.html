@@ -8,8 +8,8 @@
         <meta name="author" content="Eduardo Coronado Santana">
         <meta name="description" content="Descubre los destinos turísticos, pueblos mágicos, paisajes y sitios históricos del estado de Hidalgo, México.">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="icon" type="image/png" href="../img/pin-turistico-hidalgo-icono-favicon.png">
-        <link rel="apple-touch-icon" href="../img/pin-turistico-hidalgo-icono-favicon.png">
+        <link rel="icon" type="image/png" sizes="64x64" href="img/favicon-hidalgo.png">
+        <link rel="apple-touch-icon" href="img/pin-turistico-hidalgo-icono-favicon.png">
         <meta name="theme-color" content="#0f172a">
 
         <!-- Bootstrap 5 CSS -->
@@ -132,20 +132,30 @@
                         </div>
 
                         <div class="galeria-historia-hidalgo" aria-label="Imágenes representativas de Hidalgo">
-                            <!-- Puedes cambiar estas imágenes por tres fotografías históricas o paisajísticas propias. -->
                             <figure class="foto-historia foto-historia-grande">
-                                <img src="../img/reloj_hidalgo_banner.webp" alt="Reloj Monumental de Pachuca">
+                                <button type="button" class="foto-historia-boton" aria-label="Ampliar imagen: Historia minera y urbana">
+                                    <img src="img/Mina-de-Plata-Britanica.webp" alt="Mina de plata británica en Hidalgo">
+                                </button>
                                 <figcaption>Historia minera y urbana</figcaption>
                             </figure>
                             <figure class="foto-historia">
-                                <img src="../img/naturaleza.webp" alt="Paisaje natural de Hidalgo">
+                                <button type="button" class="foto-historia-boton" aria-label="Ampliar imagen: Naturaleza">
+                                    <img src="img/Bosque-de-las-Truchas.webp" alt="Bosque de las Truchas en Hidalgo">
+                                </button>
                                 <figcaption>Naturaleza</figcaption>
                             </figure>
                             <figure class="foto-historia">
-                                <img src="../img/gastronomia.webp" alt="Gastronomía tradicional hidalguense">
-                                <figcaption>Sabores tradicionales</figcaption>
+                                <button type="button" class="foto-historia-boton" aria-label="Ampliar imagen: Legado tolteca">
+                                    <img src="img/altlantes-tula.webp" alt="Atlantes toltecas de Tula">
+                                </button>
+                                <figcaption>Legado tolteca</figcaption>
                             </figure>
                         </div>
+                        <dialog class="visor-foto-historia" aria-label="Imagen ampliada">
+                            <button type="button" class="visor-foto-cerrar" aria-label="Cerrar imagen ampliada">&times;</button>
+                            <img class="visor-foto-imagen" alt="">
+                            <p class="visor-foto-descripcion"></p>
+                        </dialog>
                     </div>
                 </div>
             </section>
@@ -156,7 +166,6 @@
             <section class="seccion-legado-hidalgo" id="legado-hidalgo">
                 <div class="contenedor contenido-legado-hidalgo">
                     <div class="imagen-legado-hidalgo">
-                        <!-- Sustituye esta imagen por una fotografía de Tula, el Acueducto o patrimonio hidalguense si cuentas con una propia. -->
                         <img src="../img/imagen.webp" alt="Paisaje representativo del patrimonio de Hidalgo">
                     </div>
                     <div class="texto-legado-hidalgo">
@@ -194,7 +203,6 @@
                         <!-- Destino 1 -->
                         <a href="html/detalle.html?id=prismas-basalticos" class="tarjeta-destino" id="destino-prismas">
                             <div class="imagen-destino">
-                                <!-- Reemplaza src con tu imagen -->
                                 <img src="../img/imagen.webp" alt="Prismas Basálticos de Huasca de Ocampo">
                                 <span class="etiqueta-categoria etiqueta-naturaleza">Naturaleza</span>
                             </div>
@@ -208,7 +216,6 @@
                         <!-- Destino 2 -->
                         <a href="html/detalle.html?id=grutas-tolantongo" class="tarjeta-destino" id="destino-tolantongo">
                             <div class="imagen-destino">
-                                <!-- Reemplaza src con tu imagen -->
                                 <img src="../img/imagen.webp" alt="Grutas de Tolantongo">
                                 <span class="etiqueta-categoria etiqueta-naturaleza">Naturaleza</span>
                             </div>
@@ -222,7 +229,6 @@
                         <!-- Destino 3 -->
                         <a href="html/detalle.html?id=real-del-monte" class="tarjeta-destino" id="destino-real-del-monte">
                             <div class="imagen-destino">
-                                <!-- Reemplaza src con tu imagen -->
                                 <img src="../img/imagen.webp" alt="Real del Monte, Pueblo Mágico">
                                 <span class="etiqueta-categoria etiqueta-pueblo">Pueblo Mágico</span>
                             </div>
@@ -236,7 +242,6 @@
                         <!-- Destino 4 -->
                         <a href="html/detalle.html?id=huasca-de-ocampo" class="tarjeta-destino" id="destino-huasca">
                             <div class="imagen-destino">
-                                <!-- Reemplaza src con tu imagen -->
                                 <img src="../img/imagen.webp" alt="Huasca de Ocampo, Pueblo Mágico">
                                 <span class="etiqueta-categoria etiqueta-pueblo">Pueblo Mágico</span>
                             </div>
@@ -260,7 +265,6 @@
                  ========================================== -->
             <section class="seccion-cta" id="seccion-mapa-cta">
                 <div class="fondo-cta">
-                    <!-- Reemplaza src con una imagen panorámica de Hidalgo -->
                     <img src="../img/reloj_hidalgo_banner.webp" alt="Vista panorámica de Hidalgo" class="imagen-cta">
                 </div>
                 <div class="contenido-cta">
