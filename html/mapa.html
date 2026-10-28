@@ -65,11 +65,11 @@
                 </div>
             </section>
 
-            <section class="seccion-mapa-principal">
+            <section class="seccion-mapa">
                 <div class="contenedor">
                     
                     <!-- Controles sobre el mapa -->
-                    <div class="barra-controles-mapa">
+                    <div class="controles-mapa">
                         <div class="grupo-botones-filtro" role="group" aria-label="Filtrar marcadores del mapa">
                             <button type="button" class="boton-filtro activo" data-filtro="todos">
                                 <i class="fa-solid fa-layer-group"></i> Todos
@@ -86,28 +86,27 @@
                         </div>
 
                         <!-- Leyenda de colores -->
-                        <div class="leyenda-mapa">
-                            <span class="indicador-leyenda leyenda-pm">Pueblos Mágicos</span>
-                            <span class="indicador-leyenda leyenda-nat">Naturaleza</span>
-                            <span class="indicador-leyenda leyenda-gas">Gastronomía</span>
+                        <div class="leyenda">
+                            <span class="punto-leyenda leyenda-pueblos">Pueblos Mágicos</span>
+                            <span class="punto-leyenda leyenda-naturaleza">Naturaleza</span>
+                            <span class="punto-leyenda leyenda-gastro">Gastronomía</span>
                         </div>
                     </div>
 
                     <!-- Fila con el mapa y la lista lateral de destinos -->
-                    <div class="fila-mapa-interactivo">
+                    <div class="fila-mapa">
                         <!-- Contenedor del mapa -->
                         <div class="area-mapa">
-                            <div id="mapa-hidalgo" class="mapa-grande"></div>
+                            <div id="mapa-hidalgo" class="mapa"></div>
                         </div>
 
                         <!-- Lista lateral con acceso directo -->
-                        <aside class="panel-lista-destinos-mapa">
-                            <div class="cabecera-panel-destinos">
+                        <aside class="panel-mapa">
+                            <div class="cab-panel">
                                 <h3><i class="fa-solid fa-list-check"></i> Destinos (<span id="cuenta-destinos-mapa">12</span>)</h3>
                                 <p>Haz clic en cualquier lugar para centrar el mapa:</p>
                             </div>
-                            <div class="lista-items-mapa" id="lista-destinos-panel">
-                                <!-- Llenado por JS -->
+                            <div class="lista-mapa" id="lista-destinos-panel"> 
                             </div>
                         </aside>
                     </div>
@@ -121,7 +120,7 @@
                 <div class="rejilla-pie">
                     <div class="columna-pie">
                         <div class="logo-pie">
-                            <img src="../img/pin-turistico-hidalgo-icono-favicon.png" alt="Pin turístico de Descubre Hidalgo" class="logo-pie-imagen">
+                            <img src="../img/explora-hidalgo-logo-transparente.webp" alt="Pin turístico de Descubre Hidalgo" class="logo-pie-imagen">
                             <span>Descubre Hidalgo</span>
                         </div>
                         <p class="descripcion-pie">Tu portal turístico para descubrir la riqueza cultural, natural e histórica del estado de Hidalgo, México.</p>
@@ -161,13 +160,12 @@
 
         <!-- Bootstrap 5 JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Leaflet JS -->
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-        <!-- Base de datos de destinos -->
+        <!-- base de datos de destinos -->
         <script src="../js/datos-destinos.js"></script>
-        <!-- Límite geográfico del Estado de Hidalgo -->
+        <!-- límite geográfico del Estado de Hidalgo -->
         <script src="../js/limite-hidalgo.js"></script>
-        <!-- Lógica interactiva del mapa -->
+        <!-- lógica interactiva del mapa -->
         <script src="../js/mapa.js"></script>
     </body>
 </html>

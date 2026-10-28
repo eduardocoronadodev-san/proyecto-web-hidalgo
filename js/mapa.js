@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function crearIconoPersonalizado(categoria) {
         const color = coloresCategoria[categoria] || '#2563eb';
         return L.divIcon({
-            className: 'marcador-personalizado',
+            className: 'pin-mapa',
             html: `<div style="background-color: ${color}; width: 28px; height: 28px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); border: 2px solid white; box-shadow: 0 2px 6px rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center;">
                 <div style="width: 10px; height: 10px; background-color: white; border-radius: 50%; transform: rotate(45deg);"></div>
             </div>`,
@@ -95,16 +95,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Popup interactivo con espacio para imagen
             const contenidoPopup = `
-                <div class="popup-mapa">
-                    <div class="espacio-imagen-popup">
+                <div class="ventana-mapa">
+                    <div class="foto-ventana">
                         <img src="${destino.imagen}" alt="${destino.nombre}">
                     </div>
-                    <div class="cuerpo-popup">
+                    <div class="cuerpo-ventana">
                         <span class="insignia-categoria categoria-${destino.categoria}">${destino.etiqueta}</span>
                         <h4>${destino.nombre}</h4>
-                        <p class="ubicacion-popup"><i class="fa-solid fa-location-dot"></i> ${destino.ubicacion}</p>
-                        <p class="resumen-popup">${destino.resumen}</p>
-                        <a href="detalle.html?id=${encodeURIComponent(destino.id)}" class="boton-popup-ver">
+                        <p class="ubicacion-ventana"><i class="fa-solid fa-location-dot"></i> ${destino.ubicacion}</p>
+                        <p class="resumen-ventana">${destino.resumen}</p>
+                        <a href="detalle.html?id=${encodeURIComponent(destino.id)}" class="boton-ficha">
                             Ver ficha completa <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
@@ -118,14 +118,14 @@ document.addEventListener('DOMContentLoaded', function () {
             // Elemento en la lista lateral
             if (listaPanel) {
                 const itemLista = document.createElement('div');
-                itemLista.className = 'item-lista-destino';
+                itemLista.className = 'item-mapa';
                 itemLista.innerHTML = `
-                    <div class="indicador-item categoria-${destino.categoria}"></div>
-                    <div class="info-item-lista">
+                    <div class="punto-item categoria-${destino.categoria}"></div>
+                    <div class="info-item">
                         <strong>${destino.nombre}</strong>
                         <span><i class="fa-solid fa-location-dot"></i> ${destino.ubicacion}</span>
                     </div>
-                    <i class="fa-solid fa-chevron-right icono-flecha-item"></i>
+                    <i class="fa-solid fa-chevron-right flecha-item"></i>
                 `;
 
                 itemLista.addEventListener('click', () => {
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Botones de filtro del mapa
-    const botonesFiltro = document.querySelectorAll('.barra-controles-mapa .boton-filtro');
+    const botonesFiltro = document.querySelectorAll('.controles-mapa .boton-filtro');
     botonesFiltro.forEach(boton => {
         boton.addEventListener('click', function () {
             botonesFiltro.forEach(b => b.classList.remove('activo'));
