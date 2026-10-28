@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const etiquetaEl = document.getElementById('etiqueta-categoria');
     if (etiquetaEl) {
         etiquetaEl.className = `insignia-categoria categoria-${destino.categoria}`;
-        let iconoCat = '<img src="../img/pin-turistico-hidalgo-icono-favicon.png" alt="" class="icono-pin-turistico" aria-hidden="true">';
+        let iconoCat = '<img src="../img/explora-hidalgo-logo-transparente.webp" alt="" class="icono-pin-turistico" aria-hidden="true">';
         if (destino.categoria === 'naturaleza') iconoCat = 'fa-mountain-sun';
         if (destino.categoria === 'gastronomia') iconoCat = 'fa-utensils';
         etiquetaEl.innerHTML = `${destino.categoria === 'pueblos-magicos' ? iconoCat : `<i class="fa-solid ${iconoCat}"></i>`} ${destino.etiqueta}`;
