@@ -139,7 +139,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Galería de imágenes (espacio para fotos)
     const galeriaContenedor = document.getElementById('galeria-imagenes');
     if (galeriaContenedor) {
         galeriaContenedor.innerHTML = '';

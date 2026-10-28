@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const tarjeta = document.createElement('article');
             tarjeta.className = 'tarjeta-destino';
 
-            let iconoCat = '<img src="../img/pin-turistico-hidalgo-icono-favicon.png" alt="" class="icono-pin-turistico" aria-hidden="true">';
+            let iconoCat = 'fa-landmark';
             if (destino.categoria === 'naturaleza') iconoCat = 'fa-mountain-sun';
             if (destino.categoria === 'gastronomia') iconoCat = 'fa-utensils';
 
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="espacio-imagen-destino">
                     <img src="${destino.imagen}" alt="${destino.nombre}" class="imagen-destino" loading="lazy">
                     <span class="insignia-categoria categoria-${destino.categoria}">
-                        ${destino.categoria === 'pueblos-magicos' ? iconoCat : `<i class="fa-solid ${iconoCat}"></i>`} ${destino.etiqueta}
+                        <i class="fa-solid ${iconoCat}" aria-hidden="true"></i> ${destino.etiqueta}
                     </span>
                 </div>
                 <div class="cuerpo-tarjeta-destino">
