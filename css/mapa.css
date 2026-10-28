@@ -18,6 +18,39 @@
     margin-bottom: 20px;
 }
 
+.barra-controles-mapa .grupo-botones-filtro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.barra-controles-mapa .boton-filtro {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.barra-controles-mapa .boton-filtro:hover {
+    background-color: #e2e8f0;
+    color: #0f172a;
+}
+
+.barra-controles-mapa .boton-filtro.activo {
+    background-color: #0f172a;
+    border-color: #0f172a;
+    color: #ffffff;
+}
+
 .leyenda-mapa {
     display: flex;
     gap: 16px;
