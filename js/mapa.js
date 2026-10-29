@@ -30,11 +30,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (typeof LIMITE_HIDALGO !== 'undefined') {
         capaLimiteHidalgo = L.geoJSON(LIMITE_HIDALGO, {
             style: {
-                color: '#b45309',        // Color terracota/dorado para el límite
-                weight: 3,               // Grosor de la línea
-                opacity: 0.95,           // Opacidad del borde
-                dashArray: '7, 5',       // Línea discontinua estilo delimitación fronteriza
-                fillColor: '#d97706',    // Relleno sutil para destacar el territorio
+                color: '#b45309',   
+                weight: 3,            
+                opacity: 0.95,           
+                fillColor: '#d97706',   
                 fillOpacity: 0.05
             }
         }).addTo(mapa);
@@ -58,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'gastronomia': '#dc2626'
     };
 
-    // Crear icono personalizado en forma de pin
+    //  icono personalizado en forma de pin
     function crearIconoPersonalizado(categoria) {
         const color = coloresCategoria[categoria] || '#2563eb';
         return L.divIcon({
