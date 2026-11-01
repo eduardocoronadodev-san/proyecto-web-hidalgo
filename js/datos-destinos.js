@@ -1,14 +1,8 @@
 /**
- * datos-destinos.js
- * Base de datos local completa con los 9 Pueblos Mágicos oficiales de Hidalgo,
- * además de los principales atractivos de Naturaleza y Gastronomía.
- * Información histórica verificada con fuentes enciclopédicas y turísticas oficiales.
- */
+ * datos-destinos.js*/
+
 
 const DESTINOS = [
-    // ==========================================
-    // 1. LOS 9 PUEBLOS MÁGICOS OFICIALES DE HIDALGO
-    // ==========================================
     {
         id: "huasca-de-ocampo",
         nombre: "Huasca de Ocampo",

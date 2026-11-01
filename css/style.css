@@ -34,9 +34,7 @@ a {
     text-align: center;
 }
 
-/* ==========================================
-   BARRA DE NAVEGACIÓN
-   ========================================== */
+
 .barra-navegacion {
     position: fixed;
     top: 0;
@@ -187,9 +185,7 @@ img.logo-pie,
 }
 
 
-/* ==========================================
-   ESTILOS GENERALES PARA PÁGINAS INTERNAS
-   ========================================== */
+
 .pagina-interna {
     padding-top: 76px;
     background-color: #f8fafc;
@@ -200,9 +196,7 @@ img.logo-pie,
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* ==========================================
-   ENCABEZADO DE PÁGINAS INTERNAS
-   ========================================== */
+
 .encabezado-pagina {
     background-color: #0f172a;
     color: #ffffff;
@@ -262,9 +256,7 @@ img.logo-pie,
 }
 
 
-/* ==========================================
-   INSIGNIAS DE CATEGORÍA
-   ========================================== */
+
 .insignia-categoria {
     display: inline-flex;
     align-items: center;

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
-    // Obtener el ID del destino desde la URL (?id=...)
+    // Obtener el ID del destino desde la URL 
     const parametros = new URLSearchParams(window.location.search);
     const idDestino = parametros.get('id');
 
